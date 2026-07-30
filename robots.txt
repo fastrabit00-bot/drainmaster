@@ -1,2 +1,4 @@
 User-agent: *
 Allow: /
+
+Sitemap: https://drainmaster-web.heavenroadgo.workers.dev/sitemap.xml
