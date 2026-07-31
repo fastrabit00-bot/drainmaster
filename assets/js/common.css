@@ -1,0 +1,55 @@
+/* ===========================
+   DrainHero Common Styles
+   Version: 1.0
+=========================== */
+
+:root{
+  --primary:#0B63CE;
+  --primary-dark:#084C9E;
+  --secondary:#00A86B;
+  --text:#222;
+  --text-light:#666;
+  --bg:#ffffff;
+  --bg-light:#f7f8fa;
+  --border:#e5e7eb;
+
+  --radius:16px;
+
+  --shadow-sm:0 2px 8px rgba(0,0,0,.06);
+  --shadow-md:0 6px 20px rgba(0,0,0,.08);
+
+  --container:1200px;
+}
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  font-family:"Pretendard","Noto Sans KR",sans-serif;
+  color:var(--text);
+  background:var(--bg);
+  line-height:1.7;
+}
+
+img{
+  display:block;
+  max-width:100%;
+  height:auto;
+}
+
+a{
+  color:inherit;
+  text-decoration:none;
+}
+
+.container{
+  width:min(100% - 40px,var(--container));
+  margin:0 auto;
+}
