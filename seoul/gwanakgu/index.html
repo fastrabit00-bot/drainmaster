@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<!-- Gwanak master v4: mobile-first readability pass, 2026-07-31 -->
 
 <html lang="ko">
 <head>
@@ -1159,6 +1160,76 @@ footer{
  #faq details{padding:0 2px}
  #faq summary{font-size:16px;line-height:1.55;padding:18px 4px}
  #faq details p{font-size:15px;line-height:1.9;padding:0 4px 18px}
+}
+
+
+/* v4 mobile-first finishing pass — long-form content preserved */
+@media (max-width:860px){
+  html{scroll-padding-top:70px}
+  body{font-size:16px;line-height:1.82;overflow-wrap:break-word}
+  .site{width:100%;box-shadow:none}
+  header{height:60px;padding:0 14px}
+  .logo{font-size:21px;white-space:nowrap}
+  nav{gap:7px}
+  nav .call{padding:9px 11px;font-size:12px;white-space:nowrap}
+  .breadcrumb{padding:9px 18px;font-size:12px;white-space:nowrap;overflow-x:auto}
+
+  .hero{padding:42px 18px 46px;gap:24px}
+  .eyebrow{font-size:12px;line-height:1.45}
+  .hero h1{font-size:34px;line-height:1.18;letter-spacing:-1.35px;word-break:keep-all}
+  .hero h1 em{display:block;margin-top:7px;font-size:.72em;line-height:1.35}
+  .hero p{font-size:16px;line-height:1.85;word-break:keep-all}
+  .hero-buttons{display:grid;grid-template-columns:1fr;gap:10px}
+  .btn{width:100%;padding:14px 13px;text-align:center;font-size:15px}
+  .hero-photo,.hero-art{min-height:260px;border-radius:22px}
+  .hero-photo img{min-height:260px;max-height:330px;object-fit:cover}
+
+  .quick{grid-template-columns:repeat(2,1fr)}
+  .quick div{min-height:72px;padding:14px 6px;display:flex;flex-direction:column;justify-content:center}
+  .quick b{font-size:13px}.quick span{font-size:11px}
+
+  section,.guide-section,.process-section,.decision-section{padding:52px 18px}
+  h2{font-size:28px;line-height:1.36;letter-spacing:-.8px;word-break:keep-all}
+  h3{font-size:20px;line-height:1.42;word-break:keep-all}
+  .lead,.card p,.special-card p,.area-card p,.local-card p,.case p,.faq p,
+  .guide-card p,.decision-card li,.diagram-card span{font-size:15px;line-height:1.85;word-break:keep-all}
+
+  .grid3,.grid4,.hp-visual,.building-diagram,.phones,.area-grid,.trap-layout,
+  .guide-grid,.decision-grid,.local-grid{grid-template-columns:1fr;gap:14px}
+  .grease-flow,.heat-graphic,.special-grid,.process-flow,.check-list,
+  .related-links{grid-template-columns:1fr;gap:12px}
+  .card,.hp-card,.special-card,.area-card,.local-card,.guide-card,.decision-card,
+  .diagram-card,.case{padding:21px 18px;border-radius:17px}
+  .iconbox{height:112px;margin:-21px -18px 17px;border-radius:17px 17px 0 0}
+  .photo-block{margin:24px 0 6px}
+  .photo-block img,.building-system-photo img{border-radius:17px}
+  .photo-block figcaption,.building-system-photo figcaption{font-size:13px;line-height:1.75;padding-top:10px}
+
+  .case{grid-template-columns:1fr;gap:10px}
+  .case-num{font-size:38px}
+  .case-meta{gap:6px}.case-meta span{font-size:11px;padding:6px 9px}
+  .keyword-note,.local-note,.notice-box,.review-note{font-size:14px;line-height:1.85;padding:18px}
+
+  .faq details{padding:18px 0}
+  .faq summary{font-size:16px;line-height:1.65;padding-right:6px;word-break:keep-all}
+  .faq p{margin-top:12px}
+
+  .check-cta{padding:52px 18px}
+  .check-cta p{font-size:15px;line-height:1.85;word-break:keep-all}
+  .check-list div{padding:14px 12px;font-size:14px}
+  .check-cta .bigphone,.contact .bigphone{display:block;width:100%;font-size:24px;padding:15px 12px;border-radius:14px}
+  .contact{text-align:left}.contact h2,.contact p{text-align:left}
+
+  .building-map{min-height:440px}
+  .screen{min-height:auto;padding:15px}.phones{gap:18px}
+  .sticky{left:10px;right:10px;bottom:max(10px,env(safe-area-inset-bottom));padding:14px 12px;font-size:16px;border-radius:14px}
+  footer{padding:36px 18px 94px;font-size:13px;line-height:1.75}
+}
+
+@media (max-width:380px){
+  .hero h1{font-size:30px}
+  h2{font-size:25px}
+  section,.guide-section,.process-section,.decision-section{padding-left:16px;padding-right:16px}
 }
 </style>
 <meta content="website" property="og:type"/>
