@@ -1,6 +1,5 @@
 <!DOCTYPE html>
-
- Gwanak master v9: minimal contact UI and fixed call control, 2026-07-31 
+<!-- DrainHero Seoul Standard v10 · Gwanak master · 2026-07-31 -->
 <html lang="ko">
 <head>
 <!-- Google tag (gtag.js) -->
@@ -13,6 +12,8 @@
 </script>
 <meta charset="utf-8"/>
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
+<meta name="theme-color" content="#062831"/>
+<meta name="color-scheme" content="light"/>
 <title>관악구 하수구막힘 업체 | 싱크대·식당배관·고압세척 드레인명장</title>
 <meta content="관악구 하수구막힘 업체 안내. 신림동·봉천동·남현동 싱크대막힘, 변기막힘, 식당 기름배관, 배관내시경, 고압세척, 횡주관·우수관·맨홀 점검과 작업 과정을 확인하세요. 드레인명장 1877-8196." name="description"/>
 <meta content="index,follow" name="robots"/>
@@ -1720,9 +1721,52 @@ section{scroll-margin-top:90px}
  body{padding-bottom:82px}
 }
 @media(max-width:480px){.trust-grid{grid-template-columns:1fr}.mid-cta .cta-actions{display:grid;grid-template-columns:1fr}.mid-cta .cta-actions a{width:100%}}
-</style></head>
+</style>
+<style>
+/* Seoul Standard v10 — final visual system */
+:root{--radius-sm:14px;--radius-md:18px;--radius-lg:24px;--shadow-sm:0 8px 22px rgba(6,40,49,.07);--shadow-md:0 16px 38px rgba(6,40,49,.11)}
+.skip-link{position:fixed;left:12px;top:-80px;z-index:10000;padding:12px 16px;border-radius:10px;background:#fff;color:var(--navy);font-weight:900;text-decoration:none;box-shadow:var(--shadow-md)}
+.skip-link:focus{top:12px}
+section{scroll-margin-top:84px}
+.card,.hp-card,.special-card,.area-card,.local-card,.guide-card,.decision-card,.matrix-card,.symptom-item,.choice-card,.trust-item{height:100%;transition:transform .2s ease,box-shadow .2s ease,border-color .2s ease}
+@media(hover:hover){.card:hover,.hp-card:hover,.special-card:hover,.area-card:hover,.local-card:hover,.guide-card:hover,.decision-card:hover,.matrix-card:hover,.symptom-item:hover,.choice-card:hover,.trust-item:hover{transform:translateY(-3px);border-color:#b9ded3;box-shadow:var(--shadow-sm)}}
+.photo-block img{aspect-ratio:16/9;object-fit:cover;background:#edf4f2}
+.hero-photo img{aspect-ratio:16/10}
+.btn,.call,.floating-call,.related-links a,.service-hub a{-webkit-tap-highlight-color:transparent}
+.btn:focus-visible,.call:focus-visible,.floating-call:focus-visible,.related-links a:focus-visible,.service-hub a:focus-visible,summary:focus-visible{outline:3px solid var(--yellow);outline-offset:3px}
+.faq details{border-bottom:1px solid var(--line);background:#fff}
+.faq details:first-of-type{border-top:1px solid var(--line)}
+.faq summary{list-style:none;position:relative;padding-right:44px}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:'+';position:absolute;right:10px;top:50%;transform:translateY(-50%);width:28px;height:28px;border-radius:50%;display:grid;place-items:center;background:var(--soft);color:var(--navy);font-size:20px}
+.faq details[open] summary::after{content:'−';background:#dff8ef}
+.contact .final-call{box-shadow:0 12px 30px rgba(6,40,49,.14)}
+footer{font-size:13px;line-height:1.8}
+@media(max-width:860px){
+  body{background:#fff}
+  .hero{padding-top:34px}
+  .hero h1 br{display:none}
+  .hero h1 em{display:block}
+  .hero-photo img{aspect-ratio:4/3;height:auto;min-height:0;max-height:none}
+  .photo-block img{aspect-ratio:4/3}
+  .kicker{font-size:12px;letter-spacing:.06em}
+  h2 br{display:none}
+  .faq details{padding:0}
+  .faq summary{padding:18px 46px 18px 4px}
+  .faq summary::after{right:4px}
+  .floating-call{min-height:56px}
+}
+@media(max-width:420px){
+  .logo{font-size:20px}
+  nav .call{font-size:11px;padding:9px 9px}
+  .hero h1{font-size:30px}
+  h2{font-size:25px}
+}
+</style>
+</head>
 <body>
-<!-- DrainMaster Gwanak Master v8: final regional master template -->
+<a class="skip-link" href="#main-content">본문 바로가기</a>
+<!-- DrainHero Seoul Standard v10: regional master template -->
 
 <div class="site">
 <header>
@@ -1740,7 +1784,7 @@ section{scroll-margin-top:90px}
 </nav>
 </header>
 <div aria-label="경로" class="breadcrumb"><a href="/">홈</a> &gt; <a href="/seoul/">서울</a> &gt; <strong>관악구</strong></div>
-<main>
+<main id="main-content">
 <section class="hero">
 <div>
 <span class="eyebrow">서울 관악구 하수구·배관 종합 안내</span>
