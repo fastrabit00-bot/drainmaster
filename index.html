@@ -1924,6 +1924,302 @@ section{
   }
   .contact{padding:76px 18px 92px}
 }
+
+/* ===== Homepage final hero & CTA pass v5 ===== */
+.hero-v5{
+  min-height:680px;
+  align-items:center;
+  padding:84px 46px 76px;
+}
+.hero-copy{
+  position:relative;
+  z-index:2;
+}
+.hero-v5 h1{
+  max-width:760px;
+  margin:20px 0 22px;
+  font-size:clamp(3rem,5.1vw,5.2rem);
+  line-height:1.06;
+  letter-spacing:-.065em;
+}
+.hero-lead{
+  max-width:700px;
+  margin:0;
+  font-size:clamp(1rem,1.4vw,1.18rem);
+  line-height:1.82;
+}
+.hero-service-tags{
+  display:flex;
+  flex-wrap:wrap;
+  gap:9px;
+  margin-top:24px;
+}
+.hero-service-tags span{
+  padding:9px 13px;
+  border:1px solid rgba(255,255,255,.16);
+  border-radius:999px;
+  background:rgba(255,255,255,.08);
+  color:#e8f7f3;
+  font-size:14px;
+  font-weight:850;
+}
+.hero-buttons-v5{
+  align-items:stretch;
+  margin-top:30px;
+}
+.hero-buttons-v5 .btn{
+  min-height:58px;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+}
+.hero-call{
+  min-width:225px;
+  flex-direction:column;
+  gap:1px;
+}
+.hero-call small{
+  font-size:11px;
+  letter-spacing:.06em;
+  opacity:.88;
+}
+.hero-call strong{
+  font-size:21px;
+  letter-spacing:-.02em;
+}
+.btn-ghost{
+  color:#fff;
+  border:1px solid rgba(255,255,255,.26);
+  background:rgba(255,255,255,.06);
+}
+.hero-v5 .cta-note{
+  max-width:660px;
+  margin:17px 0 0;
+  color:#a9c7c4;
+  font-size:13px;
+  line-height:1.65;
+}
+.hero-photo-v5{
+  position:relative;
+  overflow:hidden;
+  min-height:520px;
+  border-radius:32px;
+  border:1px solid rgba(255,255,255,.18);
+  box-shadow:0 28px 65px rgba(0,0,0,.26);
+}
+.hero-photo-v5 img{
+  width:100%;
+  height:100%;
+  min-height:520px;
+  object-fit:cover;
+}
+.hero-photo-v5:after{
+  content:"";
+  position:absolute;
+  inset:45% 0 0;
+  background:linear-gradient(180deg,transparent,rgba(3,25,31,.88));
+}
+.hero-photo-caption{
+  position:absolute;
+  left:24px;
+  right:24px;
+  bottom:24px;
+  z-index:2;
+  display:flex;
+  flex-direction:column;
+  gap:5px;
+  color:#fff;
+}
+.hero-photo-caption b{
+  font-size:20px;
+}
+.hero-photo-caption span{
+  color:#cce2df;
+  font-size:13px;
+}
+
+.service-hub-v5{
+  position:relative;
+  z-index:3;
+}
+
+.confidence-strip{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:1px;
+  background:#dce9e6;
+  border-bottom:1px solid #dce9e6;
+}
+.confidence-strip>div{
+  min-height:128px;
+  padding:25px 20px;
+  display:grid;
+  grid-template-columns:34px 1fr;
+  align-content:center;
+  column-gap:12px;
+  background:#f8fbfa;
+}
+.confidence-strip span{
+  grid-row:1/3;
+  align-self:start;
+  color:var(--mint);
+  font-size:13px;
+  font-weight:950;
+}
+.confidence-strip b{
+  color:var(--navy);
+  font-size:16px;
+  line-height:1.3;
+}
+.confidence-strip small{
+  margin-top:5px;
+  color:#667b80;
+  font-size:12px;
+  line-height:1.5;
+}
+
+.trust-strip-v5{
+  padding-top:100px;
+  padding-bottom:100px;
+}
+.trust-strip-v5>p{
+  max-width:720px;
+}
+
+.mid-cta-v5{
+  gap:36px;
+}
+.mid-cta-v5 h2{
+  max-width:900px;
+}
+.cta-actions-v5{
+  min-width:220px;
+  display:grid;
+  gap:10px;
+}
+.cta-phone{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  min-height:76px;
+  padding:12px 20px;
+  border-radius:14px;
+  background:var(--mint);
+  color:#fff;
+  text-decoration:none;
+}
+.cta-phone small{
+  font-size:11px;
+  opacity:.85;
+}
+.cta-phone strong{
+  font-size:22px;
+}
+
+.contact-v5{
+  padding-top:112px;
+  padding-bottom:112px;
+}
+.contact-v5>p{
+  max-width:700px;
+  margin-left:auto;
+  margin-right:auto;
+}
+.final-cta-actions{
+  display:flex;
+  align-items:stretch;
+  justify-content:center;
+  flex-wrap:wrap;
+  gap:12px;
+  margin:32px auto 0;
+}
+.final-cta-actions .bigphone{
+  min-width:260px;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+}
+.final-cta-actions .bigphone small{
+  font-size:12px;
+  opacity:.78;
+}
+.final-secondary{
+  min-width:160px;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  padding:17px 22px;
+  border:1px solid #c9d9d6;
+  border-radius:14px;
+  background:#fff;
+  color:var(--navy);
+  font-weight:950;
+  text-decoration:none;
+}
+.contact-disclaimer{
+  margin-top:22px!important;
+  font-size:13px!important;
+  color:#667b80!important;
+}
+
+@media(max-width:980px){
+  .hero-v5{
+    min-height:0;
+  }
+  .confidence-strip{
+    grid-template-columns:repeat(2,1fr);
+  }
+}
+@media(max-width:620px){
+  .hero-v5{
+    padding:58px 20px 34px;
+  }
+  .hero-v5 h1{
+    font-size:clamp(2.7rem,13vw,3.8rem);
+  }
+  .hero-photo-v5,
+  .hero-photo-v5 img{
+    min-height:330px;
+  }
+  .hero-service-tags{
+    gap:7px;
+  }
+  .hero-service-tags span{
+    padding:8px 10px;
+    font-size:12px;
+  }
+  .hero-buttons-v5{
+    display:grid;
+    grid-template-columns:1fr;
+  }
+  .hero-buttons-v5 .btn{
+    width:100%;
+  }
+  .confidence-strip{
+    grid-template-columns:1fr;
+  }
+  .confidence-strip>div{
+    min-height:104px;
+  }
+  .mid-cta-v5{
+    padding-left:20px;
+    padding-right:20px;
+  }
+  .cta-actions-v5{
+    width:100%;
+  }
+  .final-cta-actions{
+    display:grid;
+    grid-template-columns:1fr;
+  }
+  .final-cta-actions>a{
+    width:100%;
+    min-width:0;
+  }
+}
+
 </style>
 <meta content="website" property="og:type"/>
 <meta content="ko_KR" property="og:locale"/>
@@ -2042,6 +2338,7 @@ section{scroll-margin-top:90px}
 }
 @media(max-width:480px){.trust-grid{grid-template-columns:1fr}.mid-cta .cta-actions{display:grid;grid-template-columns:1fr}.mid-cta .cta-actions a{width:100%}}
 </style><meta content="homepage-final-v4-20260731" name="build-version"/>
+<meta name="build-version" content="homepage-final-v5-20260731">
 </head>
 <body>
 <!-- DrainMaster Drain Hero Master v8: final regional master template -->
@@ -2061,40 +2358,46 @@ section{scroll-margin-top:90px}
 <a class="call" href="tel:1877-8196">1877-8196</a>
 </nav>
 </header>
-<div aria-label="경로" class="breadcrumb"><a href="/">홈</a> &gt; <a href="/seoul/">서울</a> &gt; <strong>서울·경기·인천</strong></div>
+<div aria-label="경로" class="breadcrumb"><a href="/">홈</a> &gt; <strong>드레인명장</strong></div>
 <main>
-<section class="hero">
-<div>
-<span class="eyebrow">서울 하수구·배관 종합 안내</span>
+<section class="hero hero-v5">
+<div class="hero-copy">
+<span class="eyebrow">DRAIN HERO · 하수구·배관 전문 안내</span>
 <h1>
-      하수구막힘<br/>
-<em>막힘 · 역류 · 악취 · 배관청소</em>
+  막힌 곳만 뚫는 것이 아니라<br/>
+  <em>배관 전체의 흐름을 확인합니다</em>
 </h1>
-<p>
-      갑자기 물이 내려가지 않거나 다른 배수구로 역류하면 당황스러울 수 있습니다.
-      싱크대막힘·변기막힘·하수구악취부터 음식점 기름배관, 배관내시경,
-      고압세척과 건물 공용배관까지 증상과 구조에 맞는 확인 범위를 안내합니다.
-    </p>
-<div aria-label="빠른 증상 선택" class="hero-symptoms">
-<a href="#self-check">물이 천천히 내려감</a>
-<a href="#self-check">바닥배수구 역류</a>
-<a href="#self-check">하수구 악취</a>
-<a href="#self-check">꿀렁거림·수위 상승</a>
+<p class="hero-lead">
+  생활 하수구와 싱크대·변기부터 음식점 주방 배관,
+  배관내시경, 고압세척, 횡주관·우수관·오수관과
+  건물 메인관까지 증상과 구조에 맞춰 확인합니다.
+</p>
+<div aria-label="대표 서비스" class="hero-service-tags">
+<span>생활 하수구</span>
+<span>식당 배관</span>
+<span>건물 배관</span>
+<span>배관내시경</span>
+<span>고압세척</span>
 </div>
-<div aria-label="작업 기준 요약" class="hero-proof">
-<span>원인 범위 먼저 확인</span><span>상황별 장비 선택</span><span>작업 후 배수 테스트</span>
-</div>
-<div class="hero-buttons">
-<a aria-label="드레인명장 1877-8196 전화 연결" class="btn btn-main cta-primary minimal-number" href="tel:1877-8196"><strong>1877-8196</strong><small>클릭 시 전화 연결</small></a>
+<div class="hero-buttons hero-buttons-v5">
+<a aria-label="드레인명장 1877-8196 전화 연결" class="btn btn-main hero-call" href="tel:1877-8196">
+  <small>빠른 전화상담</small>
+  <strong>1877-8196</strong>
+</a>
 <a class="btn btn-sub" href="#self-check">30초 증상 확인</a>
+<a class="btn btn-ghost" href="#cases">작업 사례 보기</a>
 </div>
-<p class="cta-note">드레인명장 전화 상담</p>
+<p class="cta-note">증상이 나타난 위치와 함께 반응하는 배수구를 알려주시면 확인 범위를 잡는 데 도움이 됩니다.</p>
 </div>
-<div class="hero-photo">
+<div class="hero-photo hero-photo-v5">
 <img alt="드레인명장 하수구막힘과 건물 배관 고압세척 대표 이미지" decoding="async" fetchpriority="high" height="900" src="./assets/images/hero/main-hero-01.webp.png" width="1600"/>
+<div class="hero-photo-caption">
+<b>생활 배관부터 건물 메인관까지</b>
+<span>증상 확인 → 범위 판단 → 장비 선택 → 배수 테스트</span>
+</div>
 </div>
 </section>
-<nav aria-label="증상별 바로가기" class="service-hub">
+<nav aria-label="증상별 바로가기" class="service-hub service-hub-v5">
 <a href="#home"><span>🚰</span><b>싱크대막힘</b></a>
 <a href="#home"><span>🚽</span><b>변기막힘</b></a>
 <a href="#self-check"><span>💧</span><b>하수구역류</b></a>
@@ -2102,18 +2405,15 @@ section{scroll-margin-top:90px}
 <a href="#highpressure"><span>🛠️</span><b>배관고압세척</b></a>
 <a href="#guide"><span>📹</span><b>배관내시경</b></a>
 </nav>
-<div class="quick">
-<div><b>하수구막힘</b><span>배수불량</span></div>
-<div><b>싱크대막힘</b><span>기름·음식물</span></div>
-<div><b>변기막힘</b><span>이물질 회수</span></div>
-<div><b>고압세척</b><span>배관 내부 세척</span></div>
-<div><b>횡주관</b><span>건물 공용배관</span></div>
-<div><b>우수관</b><span>옥상 빗물배관</span></div>
-<div><b>맨홀</b><span>침전물 점검</span></div>
-<div><b>내시경</b><span>배관 내부 확인</span></div>
-</div><section class="trust-strip" id="why-drainmaster">
-<h2>막힌 곳만 뚫기보다, 다시 막히는 이유까지 살펴봅니다</h2>
-<p>같은 증상이라도 개별 배수관, 공용배관, 횡주관, 우수관처럼 확인해야 할 범위가 다릅니다. 드레인명장은 증상과 건물 구조를 함께 보고 필요한 작업 범위를 안내합니다.</p>
+<section aria-label="드레인명장 작업 기준" class="confidence-strip">
+<div><span>01</span><b>배관내시경 진단</b><small>보이지 않는 내부 상태 확인</small></div>
+<div><span>02</span><b>고압세척 장비</b><small>배관 벽면 오염 범위 세척</small></div>
+<div><span>03</span><b>건물 메인관 점검</b><small>공용배관과 연결 흐름 확인</small></div>
+<div><span>04</span><b>작업 후 배수 테스트</b><small>배수 속도와 역류 여부 재확인</small></div>
+</section>
+<section class="trust-strip trust-strip-v5" id="why-drainmaster">
+<span class="section-kicker">WHY DRAIN HERO</span><h2>같은 막힘도 원인과<br/><span class="headline-accent">확인해야 할 배관 범위가 다릅니다</span></h2>
+<p>한 곳의 배수 문제인지, 여러 공간이 연결된 공용배관 문제인지 먼저 구분해야 불필요한 작업과 반복 막힘을 줄일 수 있습니다.</p>
 <div class="trust-grid">
 <div class="trust-item"><b>증상부터 확인</b><span>언제부터, 어느 공간에서, 어떤 방식으로 문제가 나타났는지 먼저 정리합니다.</span></div>
 <div class="trust-item"><b>배관 범위 판단</b><span>한 곳의 막힘인지 여러 공간이 연결된 공용배관 문제인지 확인합니다.</span></div>
@@ -2563,9 +2863,16 @@ section{scroll-margin-top:90px}
 <article class="case"><div class="case-num">07</div><div><h3>서울대입구역 카페 싱크대와 바닥배수구 동시 지연</h3><div class="case-meta"><span>카페</span><span>커피 찌꺼기</span><span>합류배관</span></div><p>싱크대와 제빙기, 바닥배수구가 연결된 구간에서 배수가 함께 느려지는 상황입니다. 커피 찌꺼기와 우유 성분, 세제 찌꺼기가 합류부에 누적됐는지 살펴보고 배관내시경과 세척 장비의 적용 여부를 구분합니다.</p></div></article>
 <article class="case"><div class="case-num">08</div><div><h3>다세대주택 변기 이물질과 반복 막힘</h3><div class="case-meta"><span>변기</span><span>이물질 회수</span><span>배수 테스트</span></div><p>칫솔이나 플라스틱 부품처럼 물에 녹지 않는 물체가 변기 굴곡에 걸리면 휴지와 다른 이물질이 추가로 붙어 반복 막힘이 생길 수 있습니다. 무리하게 밀어 넣지 않고 위치와 회수 가능 여부를 확인한 뒤 정상 배수를 점검합니다.</p></div></article>
 <article class="case"><div class="case-num">09</div><div><h3>조원동 다세대주택 세면대와 욕실 동시 지연</h3><div class="case-meta"><span>다세대주택</span><span>세면대</span><span>합류배관</span></div><p>세면대 물을 사용할 때 욕실 바닥배수구가 꿀렁거리며 배수가 늦어지는 유형입니다. 두 배수구가 합류하는 이후 구간에 비누 찌꺼기와 생활 오염물이 누적됐는지 확인합니다.</p></div></article><article class="case"><div class="case-num">10</div><div><h3>인헌동 아파트 주방 싱크대 악취와 배수불량</h3><div class="case-meta"><span>아파트</span><span>싱크대</span><span>악취</span></div><p>물이 내려가기는 하지만 냄새가 반복되고 배수 속도가 점점 느려지는 상황입니다. 트랩과 연결부, 벽체 안쪽 배관의 오염 상태와 봉수 유지 여부를 함께 살펴봅니다.</p></div></article><article class="case"><div class="case-num">11</div><div><h3>은천동 빌라 공용 횡주관 슬러지</h3><div class="case-meta"><span>빌라</span><span>횡주관</span><span>공용배관</span></div><p>저층 세대에서 먼저 역류가 나타나고 위층에서도 배수 지연이 확인되는 유형입니다. 세대 내부보다 건물 하부 횡주관과 외부 맨홀의 흐름을 우선 점검합니다.</p></div></article><article class="case"><div class="case-num">12</div><div><h3>미성동 미용실 샴푸대 반복 막힘</h3><div class="case-meta"><span>미용실</span><span>샴푸대</span><span>머리카락</span></div><p>여러 샴푸대를 사용할 때 배수가 급격히 느려지는 상황입니다. 머리카락과 샴푸, 염색약 잔여물이 합류배관에 쌓였는지 확인하고 필요한 작업 범위를 정합니다.</p></div></article><article class="case"><div class="case-num">13</div><div><h3>난향동 어린이집 화장실 여러 칸 동시 막힘</h3><div class="case-meta"><span>어린이집</span><span>화장실</span><span>공용배관</span></div><p>특정 변기 하나가 아니라 여러 칸의 물빠짐이 동시에 떨어지는 유형입니다. 개별 기구보다 공용 수평배관과 수직관 연결부를 중심으로 확인합니다.</p></div></article><article class="case"><div class="case-num">14</div><div><h3>삼성동 교회 행사 후 화장실 역류</h3><div class="case-meta"><span>교회</span><span>행사시설</span><span>사용량 증가</span></div><p>평소에는 괜찮지만 주말 행사 후 바닥배수구 수위가 올라오는 상황입니다. 순간 사용량과 공용배관의 배출 능력, 외부 맨홀 상태를 함께 살펴봅니다.</p></div></article><article class="case"><div class="case-num">15</div><div><h3>서림동 원룸 변기 수위 상승과 꿀렁거림</h3><div class="case-meta"><span>원룸</span><span>변기</span><span>통기 확인</span></div><p>변기를 사용하지 않아도 수위가 흔들리고 다른 배수구 사용 시 꿀렁거리는 유형입니다. 변기 연결부와 공용배관의 압력 변화, 통기 상태를 확인합니다.</p></div></article><article class="case"><div class="case-num">16</div><div><h3>청룡동 카페 제빙기 배수와 바닥배수구 역류</h3><div class="case-meta"><span>카페</span><span>제빙기</span><span>바닥배수구</span></div><p>제빙기 배수가 시작될 때 바닥배수구로 물이 올라오는 상황입니다. 제빙기와 싱크대가 합류하는 구간의 찌꺼기와 배관 기울기를 확인합니다.</p></div></article><article class="case"><div class="case-num">17</div><div><h3>보라매동 사무실 탕비실 싱크대 배수지연</h3><div class="case-meta"><span>사무실</span><span>탕비실</span><span>싱크대</span></div><p>커피 찌꺼기와 음식물 잔여물이 소형 배관에 누적되어 물이 천천히 내려가는 유형입니다. 트랩과 벽체 안쪽 가지배관을 순서대로 살펴봅니다.</p></div></article><article class="case"><div class="case-num">18</div><div><h3>중앙동 학원 화장실 세면대 동시 배수불량</h3><div class="case-meta"><span>학원</span><span>세면대</span><span>사용량 증가</span></div><p>수업 전후로 여러 세면대의 배수가 느려지는 상황입니다. 짧은 시간 사용량이 몰릴 때 공용배관의 부분 막힘이 드러나는지 확인합니다.</p></div></article><article class="case"><div class="case-num">19</div><div><h3>행운동 구축 아파트 욕실 악취 반복</h3><div class="case-meta"><span>구축아파트</span><span>욕실</span><span>봉수</span></div><p>청소 후에도 악취가 반복되는 유형입니다. 배수구 트랩의 봉수 상태와 배관 내부 오염, 공용배관 압력 변화 가능성을 함께 살펴봅니다.</p></div></article><article class="case"><div class="case-num">20</div><div><h3>상가건물 외부 맨홀 수위 상승</h3><div class="case-meta"><span>상가건물</span><span>맨홀</span><span>메인배관</span></div><p>점포 내부 배수구가 여러 곳에서 동시에 느려지고 외부 맨홀 수위가 높게 유지되는 상황입니다. 맨홀 내부 침전물과 앞뒤 메인배관의 배출 상태를 함께 확인합니다.</p></div></article></div>
-</section><section aria-label="하수구 상담 안내" class="mid-cta">
-<div><h2>여러 배수구가 함께 느리거나 역류한다면 공용배관 확인이 필요할 수 있습니다</h2><p>증상이 시작된 위치와 물을 사용할 때 함께 반응하는 공간을 알려주시면 확인 범위를 잡는 데 도움이 됩니다.</p></div>
-<div class="cta-actions"><a class="cta-check" href="#self-check">증상 먼저 확인</a></div>
+</section><section aria-label="하수구 상담 안내" class="mid-cta mid-cta-v5">
+<div>
+<span class="section-kicker">NEED A CHECK?</span>
+<h2>여러 배수구가 함께 느리거나 역류한다면<br/>연결 배관과 공용배관을 확인해야 할 수 있습니다</h2>
+<p>문제가 시작된 위치와 물을 사용할 때 함께 반응하는 공간을 알려주시면 상담 시 확인 범위를 더 빠르게 잡을 수 있습니다.</p>
+</div>
+<div class="cta-actions cta-actions-v5">
+<a class="cta-phone" href="tel:1877-8196"><small>전화상담</small><strong>1877-8196</strong></a>
+<a class="cta-check" href="#self-check">증상 먼저 확인</a>
+</div>
 </section>
 <section class="review">
 <div class="kicker">MESSAGE EXAMPLES</div>
@@ -2950,14 +3257,18 @@ section{scroll-margin-top:90px}
 </details>
 <details><summary>Q. 원룸에서 세탁기와 욕실이 함께 막히면 어디를 보나요?</summary><p>세탁기 배수구와 욕실 배수구가 합류한 이후 구간을 우선 확인하고, 여러 세대가 함께 반응하면 공용배관까지 범위를 넓힐 수 있습니다.</p></details><details><summary>Q. 서울 원룸 막힘이 자주 반복되는 이유가 있나요?</summary><p>사용자가 자주 바뀌는 원룸은 음식물, 기름, 세제, 섬유 먼지가 복합적으로 쌓일 수 있어 배관 벽면의 오염 범위를 함께 살펴보는 것이 좋습니다.</p></details><details><summary>Q. 경기 음식점 주방 배관은 온수 세척이 꼭 필요한가요?</summary><p>모든 현장에 필요한 것은 아닙니다. 유지방 슬러지의 두께와 배관 재질, 길이, 접근 위치를 확인한 뒤 적용 여부를 판단합니다.</p></details><details><summary>Q. 빌라 저층에서만 역류하면 세대 내부 문제인가요?</summary><p>저층이 건물 공용배관과 가까워 먼저 증상이 나타나는 경우도 있습니다. 위층의 배수 상태와 외부 맨홀 수위를 함께 확인해야 구분할 수 있습니다.</p></details><details><summary>Q. 하수구 냄새가 나지만 물은 잘 내려가면 막힘이 아닌가요?</summary><p>배수는 가능해도 트랩 봉수가 마르거나 배관 내부 오염물이 부패해 냄새가 날 수 있습니다. 악취 원인과 배수 상태를 나눠 확인합니다.</p></details><details><summary>Q. 비가 오지 않아도 우수관이 막힐 수 있나요?</summary><p>낙엽과 토사가 미리 쌓여 있다가 소량의 물에도 배수가 늦어질 수 있습니다. 장마 전 점검으로 수직관과 하부 연결부를 확인할 수 있습니다.</p></details><details><summary>Q. 배관내시경만으로 막힘을 해결할 수 있나요?</summary><p>내시경은 내부 상태와 이물질 위치를 확인하는 장비입니다. 실제 제거와 세척에는 별도의 관통, 석션, 샤프트 또는 고압세척 작업이 필요할 수 있습니다.</p></details><details><summary>Q. 상가 영업 중에도 배관 점검이 가능한가요?</summary><p>현장 동선과 배수 사용량을 확인해 가능한 범위를 조율할 수 있습니다. 다만 안전과 작업 효율을 위해 일부 구간 사용을 잠시 제한해야 할 수 있습니다.</p></details><details><summary>Q. 작업 전에 비용을 정확히 알 수 있나요?</summary><p>증상만으로는 막힌 위치와 배관 길이, 장비 투입 여부를 확정하기 어려울 수 있습니다. 현장 조건과 작업 범위를 확인한 뒤 안내하는 방식이 일반적입니다.</p></details><details><summary>Q. 전 지역에서 같은 방식으로 작업하나요?</summary><p>아닙니다. 서울 원룸, 경기 상가, 낙성대 빌라, 난곡동 주택처럼 건물 유형과 배관 구조가 달라 현장에 맞춰 확인 순서와 장비를 정합니다.</p></details></section>
 <section aria-label="하수구 상담 전 빠른 증상 확인" class="check-cta"><div class="kicker" style="color:#80edc2">QUICK CHECK</div><h2>이런 증상이 시작됐다면 배관 범위를 확인해보세요</h2><p>물이 천천히 내려가거나 다른 배수구로 역류하는 증상은 막힌 위치와 연결 배관에 따라 필요한 작업이 달라질 수 있습니다.</p><div class="check-list"><div>물이 천천히 내려감</div><div>바닥배수구 역류</div><div>꿀렁거림·악취</div><div>여러 곳 동시 막힘</div></div></section>
-<section class="contact">
+<section class="contact contact-v5">
 <div class="kicker">DRAIN HERO CONSULTING</div>
-<h2>증상만 알려주셔도<br/><span class="headline-accent">확인 순서부터 안내합니다</span></h2>
-<p>생활 배관부터 식당·상가, 건물 공용배관까지 현재 증상과 발생 장소를 기준으로 상담을 도와드립니다.</p>
-<a aria-label="드레인명장 1877-8196 전화 연결" class="bigphone final-call minimal-number" href="tel:1877-8196"><strong>1877-8196</strong><small>클릭 시 바로 전화 연결됩니다</small></a>
-<p style="font-size:13px;color:#667b80">
-    실제 작업 범위와 방법은 현장의 배관 구조 및 상태에 따라 달라질 수 있습니다.
-  </p>
+<h2>배관 문제는 막힌 위치보다<br/><span class="headline-accent">원인 범위를 먼저 찾는 것이 중요합니다</span></h2>
+<p>생활 배관, 식당·상가 배관, 건물 공용배관까지 현재 증상과 발생 장소를 기준으로 상담을 도와드립니다.</p>
+<div class="final-cta-actions">
+<a aria-label="드레인명장 1877-8196 전화 연결" class="bigphone final-call" href="tel:1877-8196">
+<small>지금 전화상담</small><strong>1877-8196</strong>
+</a>
+<a class="final-secondary" href="#self-check">증상 확인하기</a>
+<a class="final-secondary" href="#cases">작업 사례 보기</a>
+</div>
+<p class="contact-disclaimer">실제 작업 범위와 방법은 현장의 배관 구조 및 상태에 따라 달라질 수 있습니다.</p>
 </section>
 </main>
 <footer>
