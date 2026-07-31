@@ -14,7 +14,7 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
 <title>드레인명장 | 하수구막힘·배관고압세척·건물배관 전문 안내</title>
-<meta content="하수구막힘 업체 안내. 서울·경기·인천 주요 생활권 싱크대막힘, 변기막힘, 식당 기름배관, 배관내시경, 고압세척, 횡주관·우수관·맨홀 점검과 작업 과정을 확인하세요. 드레인명장 1877-8196." name="description"/>
+<meta content="하수구막힘 업체 안내. 다양한 생활공간과 상업시설 싱크대막힘, 변기막힘, 식당 기름배관, 배관내시경, 고압세척, 횡주관·우수관·맨홀 점검과 작업 과정을 확인하세요. 드레인명장 1877-8196." name="description"/>
 <meta content="index,follow" name="robots"/>
 <link href="https://drainhero.kr/seoul/gwanakgu/" rel="canonical"/>
 <style>
@@ -1610,6 +1610,222 @@ footer{
   .knowledge-hub-card{min-height:220px}
 }
 
+
+/* ===== Homepage typography & spacing polish v3 ===== */
+:root{
+  --section-space-desktop:112px;
+  --section-space-tablet:88px;
+  --section-space-mobile:68px;
+  --heading-max:900px;
+  --copy-max:700px;
+}
+
+html{scroll-behavior:smooth}
+body{
+  overflow-x:hidden;
+  word-break:keep-all;
+  overflow-wrap:break-word;
+}
+
+section{
+  scroll-margin-top:92px;
+}
+
+.home-tech-overview,
+.field-solution-hub,
+.homepage-knowledge-hub{
+  padding-top:var(--section-space-desktop);
+  padding-bottom:var(--section-space-desktop);
+}
+
+.section-heading{
+  margin-bottom:48px;
+}
+.center-heading{
+  width:min(var(--heading-max),100%);
+}
+.center-heading h2{
+  max-width:var(--heading-max);
+  margin-left:auto;
+  margin-right:auto;
+  text-wrap:balance;
+}
+.center-heading p{
+  max-width:var(--copy-max);
+  margin-left:auto;
+  margin-right:auto;
+  text-wrap:pretty;
+}
+.split-heading{
+  grid-template-columns:minmax(0,1.08fr) minmax(320px,.92fr);
+}
+.split-heading h2{
+  max-width:760px;
+  text-wrap:balance;
+}
+.split-heading p{
+  max-width:560px;
+  justify-self:end;
+  text-wrap:pretty;
+}
+.section-heading h2{
+  font-size:clamp(2.25rem,4.3vw,4.15rem);
+  line-height:1.12;
+  letter-spacing:-.06em;
+}
+.section-heading p{
+  font-size:clamp(.98rem,1.2vw,1.08rem);
+  line-height:1.82;
+}
+.section-kicker{
+  margin-bottom:16px;
+}
+
+.technology-feature-grid{
+  grid-template-rows:repeat(2,300px);
+}
+.technology-feature,
+.technology-feature--large{
+  border-radius:26px;
+}
+.technology-feature__overlay h3{
+  line-height:1.25;
+}
+.technology-feature__overlay p{
+  line-height:1.65;
+}
+
+.field-solution-grid{
+  align-items:stretch;
+}
+.field-solution-card{
+  min-height:236px;
+  height:100%;
+  grid-template-columns:210px minmax(0,1fr);
+}
+.field-solution-card img{
+  min-height:236px;
+  aspect-ratio:4/3;
+}
+.field-solution-card>div{
+  display:flex;
+  flex-direction:column;
+}
+.field-solution-card p{
+  flex:1;
+}
+.field-solution-card a{
+  margin-top:18px;
+}
+
+.knowledge-hub-grid{
+  align-items:stretch;
+}
+.knowledge-hub-card{
+  height:100%;
+}
+
+.hero h1,
+.hero p,
+.hero .eyebrow{
+  word-break:keep-all;
+}
+.hero h1{
+  text-wrap:balance;
+}
+.hero p{
+  max-width:680px;
+  text-wrap:pretty;
+}
+
+.area h2,
+.gwanak-local h2,
+.commercial h2,
+.content-matrix h2,
+.pipe-guide h2{
+  text-wrap:balance;
+  word-break:keep-all;
+}
+
+.nowrap-desktop{
+  white-space:nowrap;
+}
+
+@media(max-width:1100px){
+  .section-heading h2{
+    font-size:clamp(2.15rem,5vw,3.45rem);
+  }
+  .nowrap-desktop{white-space:normal}
+}
+
+@media(max-width:900px){
+  .home-tech-overview,
+  .field-solution-hub,
+  .homepage-knowledge-hub{
+    padding-top:var(--section-space-tablet);
+    padding-bottom:var(--section-space-tablet);
+  }
+  .split-heading{
+    grid-template-columns:1fr;
+    gap:20px;
+  }
+  .split-heading p{
+    max-width:680px;
+    justify-self:start;
+  }
+  .technology-feature-grid{
+    grid-template-rows:auto;
+  }
+  .field-solution-card{
+    grid-template-columns:180px minmax(0,1fr);
+  }
+}
+
+@media(max-width:620px){
+  .home-tech-overview,
+  .field-solution-hub,
+  .homepage-knowledge-hub{
+    padding-top:var(--section-space-mobile);
+    padding-bottom:var(--section-space-mobile);
+  }
+  .section-heading{
+    margin-bottom:34px;
+  }
+  .section-heading h2{
+    font-size:clamp(2rem,10vw,2.75rem);
+    line-height:1.14;
+    letter-spacing:-.055em;
+  }
+  .section-heading p{
+    font-size:.98rem;
+    line-height:1.75;
+  }
+  .field-solution-card{
+    grid-template-columns:1fr;
+    min-height:0;
+  }
+  .field-solution-card img{
+    width:100%;
+    height:auto;
+    min-height:0;
+    aspect-ratio:16/10;
+  }
+  .field-solution-card>div{
+    padding:24px 22px 26px;
+  }
+  .technology-feature,
+  .technology-feature--large{
+    min-height:310px;
+    border-radius:22px;
+  }
+  .technology-feature__overlay{
+    padding:22px;
+  }
+  .knowledge-hub-card{
+    min-height:210px;
+  }
+}
+
 </style>
 <meta content="website" property="og:type"/>
 <meta content="ko_KR" property="og:locale"/>
@@ -1645,7 +1861,7 @@ footer{
       "@id":"https://drainhero.kr/#webpage",
       "url":"https://drainhero.kr/",
       "name":"드레인명장 | 하수구막힘·배관고압세척",
-      "description":"서울·경기·인천 하수구막힘, 배관내시경, 고압세척, 건물배관 안내",
+      "description":"생활 하수구막힘부터 배관내시경, 고압세척, 건물배관까지 폭넓게 안내합니다.",
       "isPartOf":{"@id":"https://drainhero.kr/#website"},
       "about":{"@id":"https://drainhero.kr/#organization"},
       "inLanguage":"ko-KR"
@@ -1727,7 +1943,8 @@ section{scroll-margin-top:90px}
  body{padding-bottom:82px}
 }
 @media(max-width:480px){.trust-grid{grid-template-columns:1fr}.mid-cta .cta-actions{display:grid;grid-template-columns:1fr}.mid-cta .cta-actions a{width:100%}}
-</style></head>
+</style><meta name="build-version" content="homepage-polish-v3-20260731">
+</head>
 <body>
 <!-- DrainMaster Drain Hero Master v8: final regional master template -->
 
@@ -1814,7 +2031,7 @@ section{scroll-margin-top:90px}
     <div class="section-heading split-heading">
       <div>
         <span class="section-kicker">DRAIN HERO TECHNOLOGY</span>
-        <h2>생활 배관부터 건물 메인관까지<br>문제 범위를 나누어 확인합니다</h2>
+        <h2>생활 배관부터 건물 메인관까지<br><span class="nowrap-desktop">배관 상태를 단계별로 확인합니다</span></h2>
       </div>
       <p>
         물이 내려가지 않는다는 같은 증상도 실제 원인은 다를 수 있습니다.
@@ -2227,10 +2444,10 @@ section{scroll-margin-top:90px}
   <div class="section-inner">
     <div class="section-heading center-heading">
       <span class="section-kicker">FIELD SOLUTION</span>
-      <h2>장소와 오염 유형에 맞춘 배관 해결 범위</h2>
+      <h2>장소와 오염 유형에 맞춘<br>배관 해결 범위</h2>
       <p>
-        가정 배관, 음식점 주방, 옥상과 우수관, 공장과 대형 건물은
-        배관 구조와 오염 형태가 다르기 때문에 점검 순서도 달라집니다.
+        가정 배관, 음식점 주방, 옥상 우수관, 공장과 대형 건물은
+        배관 구조와 오염 형태가 달라 점검 순서도 달라집니다.
       </p>
     </div>
 
@@ -2544,8 +2761,8 @@ section{scroll-margin-top:90px}
   <div class="kicker">SERVICE AREA</div>
   <h2>서울·경기·인천 지역별 배관 안내</h2>
   <p class="lead">
-    메인페이지는 드레인명장의 기술과 서비스 전체를 안내하고,
-    각 지역 페이지에서는 지역별 생활권과 건물 유형에 맞는 배관 문제를 더 자세히 확인할 수 있습니다.
+    드레인명장의 기술과 서비스는 메인페이지에서 확인하고,
+    실제 출동 지역과 지역별 상세 정보는 아래 지역 안내에서 확인할 수 있습니다.
   </p>
 
   <div class="area-grid">
@@ -2737,7 +2954,7 @@ section{scroll-margin-top:90px}
 <p>공용배관의 공기와 압력 변화가 변기 봉수에 영향을 주는 경우가 있을 수 있어 연결 배관 상태를 함께 살펴봅니다.</p>
 </details>
 <details>
-<summary>Q. 서울·경기·인천 주요 생활권도 안내 지역인가요?</summary>
+<summary>Q. 다양한 생활공간과 상업시설도 안내 지역인가요?</summary>
 <p>서울·경기·인천의 주택, 빌라, 아파트, 상가, 음식점, 사무실 등 다양한 현장의 배관 문제를 기준으로 안내하고 있습니다.</p>
 </details>
 <details>
