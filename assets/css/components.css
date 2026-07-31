@@ -1,0 +1,169 @@
+/* DrainHero Components v1
+   Target: /assets/css/components.css
+   Action: CREATE
+*/
+
+/* Buttons */
+.dh-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 52px;
+  padding: 0 22px;
+  border: 1px solid transparent;
+  border-radius: var(--dh-radius-pill);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  transition: transform var(--dh-speed-fast) var(--dh-ease),
+              box-shadow var(--dh-speed-fast) var(--dh-ease),
+              background-color var(--dh-speed-fast) var(--dh-ease),
+              border-color var(--dh-speed-fast) var(--dh-ease);
+}
+
+.dh-btn:hover { transform: translateY(-2px); }
+.dh-btn:focus-visible { outline: 3px solid rgba(10, 91, 255, .24); outline-offset: 3px; }
+.dh-btn--primary { background: var(--dh-primary-700); color: #fff; box-shadow: var(--dh-shadow-sm); }
+.dh-btn--primary:hover { background: var(--dh-primary-800); box-shadow: var(--dh-shadow-md); }
+.dh-btn--accent { background: var(--dh-accent-600); color: #fff; }
+.dh-btn--accent:hover { background: var(--dh-accent-700); box-shadow: var(--dh-shadow-md); }
+.dh-btn--outline { background: #fff; color: var(--dh-primary-700); border-color: var(--dh-primary-700); }
+.dh-btn--ghost { background: transparent; color: var(--dh-text); border-color: var(--dh-border); }
+.dh-btn--block { width: 100%; }
+
+/* Cards */
+.dh-card {
+  background: var(--dh-surface);
+  border: 1px solid var(--dh-border);
+  border-radius: var(--dh-radius-lg);
+  overflow: hidden;
+  box-shadow: var(--dh-shadow-sm);
+  transition: transform var(--dh-speed) var(--dh-ease), box-shadow var(--dh-speed) var(--dh-ease);
+}
+.dh-card:hover { transform: translateY(-6px); box-shadow: var(--dh-shadow-lg); }
+.dh-card__media { aspect-ratio: 4 / 3; overflow: hidden; background: var(--dh-bg); }
+.dh-card__media img { width: 100%; height: 100%; object-fit: cover; transition: transform var(--dh-speed) var(--dh-ease); }
+.dh-card:hover .dh-card__media img { transform: scale(1.04); }
+.dh-card__body { padding: 24px; }
+.dh-card__kicker { color: var(--dh-primary-700); font-size: var(--dh-fs-sm); font-weight: 800; }
+.dh-card__title { margin: 8px 0 10px; font-size: var(--dh-fs-xl); line-height: 1.35; font-weight: 900; }
+.dh-card__text { margin: 0; color: var(--dh-text-soft); }
+.dh-card__link { display: inline-flex; margin-top: 18px; color: var(--dh-primary-700); font-weight: 800; }
+
+/* Icon / symptom card */
+.dh-icon-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 22px;
+  background: #fff;
+  border: 1px solid var(--dh-border);
+  border-radius: var(--dh-radius-lg);
+  transition: transform var(--dh-speed-fast) var(--dh-ease), border-color var(--dh-speed-fast) var(--dh-ease);
+}
+.dh-icon-card:hover { transform: translateY(-3px); border-color: var(--dh-primary-500); }
+.dh-icon-card__icon {
+  flex: 0 0 48px;
+  width: 48px;
+  height: 48px;
+  display: grid;
+  place-items: center;
+  border-radius: 14px;
+  background: var(--dh-primary-100);
+  color: var(--dh-primary-700);
+}
+.dh-icon-card__title { margin: 0 0 6px; font-size: var(--dh-fs-lg); font-weight: 900; }
+.dh-icon-card__text { margin: 0; color: var(--dh-text-soft); font-size: var(--dh-fs-sm); }
+
+/* Hero */
+.dh-hero { position: relative; padding: 80px 0 90px; overflow: hidden; background: linear-gradient(135deg, #f7faff 0%, #eef5ff 100%); }
+.dh-hero__grid { display: grid; grid-template-columns: 1.02fr .98fr; align-items: center; gap: 48px; }
+.dh-hero__title { margin: 0; font-size: var(--dh-fs-4xl); line-height: 1.08; letter-spacing: -0.055em; font-weight: 900; }
+.dh-hero__title strong { color: var(--dh-primary-700); }
+.dh-hero__text { max-width: 650px; margin: 22px 0 0; color: var(--dh-text-soft); font-size: var(--dh-fs-lg); }
+.dh-hero__actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 30px; }
+.dh-hero__visual { position: relative; border-radius: var(--dh-radius-xl); overflow: hidden; box-shadow: var(--dh-shadow-lg); }
+.dh-hero__visual img { width: 100%; aspect-ratio: 16 / 10; object-fit: cover; }
+.dh-hero__badge {
+  position: absolute;
+  right: 18px;
+  bottom: 18px;
+  padding: 14px 18px;
+  border-radius: var(--dh-radius-md);
+  background: rgba(255,255,255,.92);
+  backdrop-filter: blur(10px);
+  box-shadow: var(--dh-shadow-md);
+  font-weight: 800;
+}
+
+/* CTA */
+.dh-cta {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  gap: 30px;
+  padding: 42px;
+  border-radius: var(--dh-radius-xl);
+  background: linear-gradient(135deg, var(--dh-primary-800), var(--dh-primary-600));
+  color: #fff;
+  box-shadow: var(--dh-shadow-lg);
+}
+.dh-cta__title { margin: 0; font-size: clamp(1.7rem, 3vw, 2.5rem); line-height: 1.25; font-weight: 900; }
+.dh-cta__text { margin: 10px 0 0; color: rgba(255,255,255,.82); }
+
+/* FAQ */
+.dh-faq { border-top: 1px solid var(--dh-border); }
+.dh-faq__item { border-bottom: 1px solid var(--dh-border); }
+.dh-faq__question {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 18px;
+  padding: 22px 0;
+  border: 0;
+  background: transparent;
+  color: var(--dh-text);
+  text-align: left;
+  font-weight: 900;
+}
+.dh-faq__answer { padding: 0 0 24px; color: var(--dh-text-soft); }
+
+/* Region links */
+.dh-region-box { padding: 28px; border: 1px solid var(--dh-border); border-radius: var(--dh-radius-lg); background: #fff; }
+.dh-region-box__title { margin: 0 0 16px; font-size: var(--dh-fs-xl); font-weight: 900; }
+.dh-region-links { display: flex; flex-wrap: wrap; gap: 10px; }
+.dh-region-links a { padding: 9px 13px; border-radius: var(--dh-radius-pill); background: var(--dh-bg); color: var(--dh-text-soft); font-size: var(--dh-fs-sm); }
+.dh-region-links a:hover { background: var(--dh-primary-100); color: var(--dh-primary-700); }
+
+/* Sticky mobile call */
+.dh-mobile-call { display: none; }
+
+@media (max-width: 900px) {
+  .dh-hero__grid { grid-template-columns: 1fr; }
+  .dh-hero__visual { order: 2; }
+  .dh-cta { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 720px) {
+  .dh-hero { padding: 54px 0 64px; }
+  .dh-hero__actions { display: grid; grid-template-columns: 1fr; }
+  .dh-card__body { padding: 20px; }
+  .dh-cta { padding: 28px 22px; }
+  .dh-mobile-call {
+    position: fixed;
+    left: 14px;
+    right: 14px;
+    bottom: 14px;
+    z-index: var(--dh-z-floating);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 56px;
+    border-radius: var(--dh-radius-pill);
+    background: var(--dh-accent-600);
+    color: #fff;
+    font-weight: 900;
+    box-shadow: var(--dh-shadow-lg);
+  }
+  body { padding-bottom: 86px; }
+}

@@ -1,0 +1,183 @@
+/* DrainHero Design System v1
+   Target: /assets/css/design-system.css
+   Action: CREATE
+*/
+
+:root {
+  /* Brand colors */
+  --dh-primary-900: #073a9d;
+  --dh-primary-800: #0848c5;
+  --dh-primary-700: #0a5bff;
+  --dh-primary-600: #1e6cff;
+  --dh-primary-500: #3b7dff;
+  --dh-primary-100: #eaf1ff;
+  --dh-primary-50: #f4f7ff;
+
+  --dh-secondary-700: #0288c7;
+  --dh-secondary-500: #18b6ff;
+  --dh-secondary-100: #e8f8ff;
+
+  --dh-accent-700: #d95400;
+  --dh-accent-600: #ff6a00;
+  --dh-accent-100: #fff0e6;
+
+  /* Neutrals */
+  --dh-black: #111827;
+  --dh-text: #1a1a1a;
+  --dh-text-soft: #4b5563;
+  --dh-muted: #6b7280;
+  --dh-border: #e7edf5;
+  --dh-bg: #f5f8fc;
+  --dh-surface: #ffffff;
+  --dh-success: #169b62;
+  --dh-warning: #c97900;
+  --dh-danger: #d92d20;
+
+  /* Typography */
+  --dh-font-sans: "Pretendard", "Noto Sans KR", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --dh-fs-xs: 0.75rem;
+  --dh-fs-sm: 0.875rem;
+  --dh-fs-base: 1rem;
+  --dh-fs-lg: 1.125rem;
+  --dh-fs-xl: 1.25rem;
+  --dh-fs-2xl: 1.5rem;
+  --dh-fs-3xl: 2rem;
+  --dh-fs-4xl: clamp(2.25rem, 5vw, 4.5rem);
+  --dh-lh-tight: 1.2;
+  --dh-lh-normal: 1.65;
+
+  /* Layout */
+  --dh-container: 1280px;
+  --dh-gutter: 24px;
+  --dh-section: 120px;
+  --dh-section-mobile: 72px;
+
+  /* Radius */
+  --dh-radius-sm: 10px;
+  --dh-radius-md: 14px;
+  --dh-radius-lg: 18px;
+  --dh-radius-xl: 28px;
+  --dh-radius-pill: 999px;
+
+  /* Shadow */
+  --dh-shadow-sm: 0 4px 14px rgba(15, 23, 42, 0.06);
+  --dh-shadow-md: 0 10px 30px rgba(15, 23, 42, 0.08);
+  --dh-shadow-lg: 0 18px 50px rgba(15, 23, 42, 0.12);
+
+  /* Motion */
+  --dh-speed-fast: 180ms;
+  --dh-speed: 400ms;
+  --dh-ease: cubic-bezier(.2, .8, .2, 1);
+
+  /* Z-index */
+  --dh-z-header: 1000;
+  --dh-z-floating: 1100;
+  --dh-z-modal: 2000;
+}
+
+*,
+*::before,
+*::after { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  font-family: var(--dh-font-sans);
+  color: var(--dh-text);
+  background: var(--dh-surface);
+  line-height: var(--dh-lh-normal);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+img,
+picture,
+svg,
+video {
+  display: block;
+  max-width: 100%;
+}
+
+a { color: inherit; text-decoration: none; }
+button,
+input,
+textarea,
+select { font: inherit; }
+button { cursor: pointer; }
+
+.dh-container {
+  width: min(calc(100% - (var(--dh-gutter) * 2)), var(--dh-container));
+  margin-inline: auto;
+}
+
+.dh-section { padding-block: var(--dh-section); }
+.dh-section--soft { background: var(--dh-bg); }
+.dh-section--dark { background: var(--dh-black); color: #fff; }
+
+.dh-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 14px;
+  color: var(--dh-primary-700);
+  font-size: var(--dh-fs-sm);
+  font-weight: 800;
+  letter-spacing: -0.01em;
+}
+
+.dh-title {
+  margin: 0;
+  font-size: clamp(2rem, 4vw, 3.5rem);
+  line-height: var(--dh-lh-tight);
+  letter-spacing: -0.04em;
+  font-weight: 900;
+}
+
+.dh-subtitle {
+  max-width: 760px;
+  margin: 18px 0 0;
+  color: var(--dh-text-soft);
+  font-size: clamp(1rem, 1.5vw, 1.125rem);
+}
+
+.dh-grid { display: grid; gap: 24px; }
+.dh-grid--2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.dh-grid--3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.dh-grid--4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+
+.dh-sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+@media (max-width: 1024px) {
+  .dh-grid--4 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .dh-grid--3 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+@media (max-width: 720px) {
+  :root { --dh-gutter: 18px; }
+  .dh-section { padding-block: var(--dh-section-mobile); }
+  .dh-grid--2,
+  .dh-grid--3,
+  .dh-grid--4 { grid-template-columns: 1fr; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

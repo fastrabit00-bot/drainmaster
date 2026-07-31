@@ -1,586 +1,377 @@
 <!doctype html>
 <html lang="ko">
 <head>
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XYRYKDDGGE"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-XYRYKDDGGE');
-  </script>
-
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>하수구막힘·배관고압세척·배관내시경 | 드레인명장</title>
-  <meta name="description" content="싱크대, 욕실, 변기, 식당, 상가, 건물 하수구막힘과 배관 역류 원인을 확인합니다. 배관고압세척, 배관내시경, 우수관과 공용배관 점검 정보를 제공하는 드레인명장입니다.">
-  <meta name="robots" content="index,follow,max-image-preview:large">
-  <meta name="theme-color" content="#08313a">
+  <title>드레인명장 | 서울·경기·인천 하수구막힘·배관고압세척</title>
+  <meta name="description" content="싱크대, 변기, 욕실, 식당 하수구막힘부터 배관내시경과 고압세척까지. 드레인명장이 원인을 확인하고 필요한 작업을 안내합니다. 전화상담 1877-8196.">
+  <meta name="robots" content="index,follow">
   <link rel="canonical" href="https://drainhero.kr/">
 
   <meta property="og:type" content="website">
-  <meta property="og:locale" content="ko_KR">
-  <meta property="og:site_name" content="드레인명장">
-  <meta property="og:title" content="하수구막힘·배관고압세척·배관내시경 | 드레인명장">
-  <meta property="og:description" content="막힌 장소와 배관 구조를 확인하고 현장 상태에 맞는 점검 및 작업 방법을 안내합니다.">
+  <meta property="og:title" content="드레인명장 | 하수구막힘·배관고압세척">
+  <meta property="og:description" content="막힌 위치와 원인을 확인한 뒤 현장에 맞는 방법으로 작업합니다. 서울·경기·인천 상담 1877-8196.">
   <meta property="og:url" content="https://drainhero.kr/">
-  <meta property="og:image" content="https://drainhero.kr/assets/images/hero/main-hero-01.webp.png">
 
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="하수구막힘·배관고압세척 | 드레인명장">
-  <meta name="twitter:description" content="가정집부터 식당, 상가, 건물 공용배관까지 배수 문제를 안내합니다.">
-  <meta name="twitter:image" content="https://drainhero.kr/assets/images/hero/main-hero-01.webp.png">
+  <link rel="stylesheet" href="/assets/css/design-system.css">
+  <link rel="stylesheet" href="/assets/css/components.css">
 
-  <link rel="preload" as="image" href="/assets/images/hero/main-hero-01.webp.png">
+  <style>
+    .site-header{position:sticky;top:0;z-index:var(--dh-z-header);background:rgba(255,255,255,.94);backdrop-filter:blur(14px);border-bottom:1px solid var(--dh-border)}
+    .site-header__inner{min-height:76px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+    .brand{display:flex;align-items:center;gap:11px;font-size:1.35rem;font-weight:900;letter-spacing:-.04em}
+    .brand__mark{width:40px;height:40px;display:grid;place-items:center;border-radius:13px;background:linear-gradient(135deg,var(--dh-primary-700),var(--dh-secondary-500));color:#fff;font-size:1.25rem;box-shadow:var(--dh-shadow-sm)}
+    .site-nav{display:flex;align-items:center;gap:26px;font-weight:800;font-size:.95rem}
+    .site-nav a:hover{color:var(--dh-primary-700)}
+    .header-call{min-height:46px;padding-inline:18px}
+    .menu-toggle{display:none;border:0;background:transparent;font-size:1.5rem}
+
+    .hero-points{display:flex;flex-wrap:wrap;gap:9px;margin-top:22px}
+    .hero-point{padding:8px 12px;border-radius:999px;background:#fff;border:1px solid var(--dh-border);font-size:.88rem;font-weight:800;box-shadow:var(--dh-shadow-sm)}
+    .hero-machine{min-height:430px;display:grid;place-items:center;padding:28px;background:linear-gradient(150deg,#0a5bff 0%,#18b6ff 100%);position:relative}
+    .hero-machine::before,.hero-machine::after{content:"";position:absolute;border-radius:50%;background:rgba(255,255,255,.13)}
+    .hero-machine::before{width:230px;height:230px;right:-60px;top:-60px}
+    .hero-machine::after{width:170px;height:170px;left:-45px;bottom:-55px}
+    .machine-panel{position:relative;z-index:1;width:min(100%,410px);padding:28px;border:1px solid rgba(255,255,255,.36);border-radius:28px;background:rgba(255,255,255,.94);box-shadow:0 24px 70px rgba(0,38,115,.25)}
+    .machine-screen{height:180px;border-radius:18px;background:#091b36;padding:18px;color:#fff;overflow:hidden}
+    .pipe-line{height:10px;margin-top:24px;border-radius:999px;background:linear-gradient(90deg,#18b6ff 0 48%,#ff6a00 48% 64%,#18b6ff 64%)}
+    .screen-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:20px}
+    .screen-grid span{height:42px;border-radius:10px;background:rgba(255,255,255,.1)}
+    .machine-label{display:flex;justify-content:space-between;gap:12px;margin-top:18px;font-weight:900}
+    .machine-label small{color:var(--dh-muted);font-weight:700}
+
+    .section-head{display:flex;justify-content:space-between;align-items:end;gap:24px;margin-bottom:38px}
+    .section-head .dh-subtitle{margin-top:12px}
+    .service-card__icon{width:58px;height:58px;display:grid;place-items:center;margin-bottom:18px;border-radius:17px;background:var(--dh-primary-100);font-size:1.65rem}
+    .service-card{padding:26px}
+    .service-card h3{margin:0 0 9px;font-size:1.2rem}
+    .service-card p{margin:0;color:var(--dh-text-soft);font-size:.95rem}
+    .service-card a{display:inline-flex;margin-top:17px;color:var(--dh-primary-700);font-weight:900}
+
+    .why-grid{display:grid;grid-template-columns:.92fr 1.08fr;gap:38px;align-items:center}
+    .diagnosis-box{padding:34px;border-radius:var(--dh-radius-xl);background:linear-gradient(145deg,#071a36,#0b3477);color:#fff;box-shadow:var(--dh-shadow-lg)}
+    .diagnosis-step{display:grid;grid-template-columns:44px 1fr;gap:15px;padding:18px 0;border-bottom:1px solid rgba(255,255,255,.14)}
+    .diagnosis-step:last-child{border-bottom:0}
+    .diagnosis-step b{width:44px;height:44px;display:grid;place-items:center;border-radius:14px;background:rgba(255,255,255,.12)}
+    .diagnosis-step h3{margin:0 0 4px;font-size:1.05rem}
+    .diagnosis-step p{margin:0;color:rgba(255,255,255,.72);font-size:.9rem}
+
+    .process-list{counter-reset:step;display:grid;grid-template-columns:repeat(5,1fr);gap:18px}
+    .process-item{position:relative;padding:26px 22px;border:1px solid var(--dh-border);border-radius:var(--dh-radius-lg);background:#fff}
+    .process-item::before{counter-increment:step;content:"0" counter(step);display:block;margin-bottom:18px;color:var(--dh-primary-700);font-weight:900;font-size:1.25rem}
+    .process-item h3{margin:0 0 8px}
+    .process-item p{margin:0;color:var(--dh-text-soft);font-size:.9rem}
+
+    .case-card{min-height:260px;display:flex;flex-direction:column;justify-content:end;padding:26px;border-radius:var(--dh-radius-xl);color:#fff;overflow:hidden;position:relative;background:linear-gradient(145deg,#0a5bff,#073a9d)}
+    .case-card:nth-child(2){background:linear-gradient(145deg,#18b6ff,#026ca2)}
+    .case-card:nth-child(3){background:linear-gradient(145deg,#ff8a3d,#cc4b00)}
+    .case-card::before{content:"";position:absolute;width:180px;height:180px;border:28px solid rgba(255,255,255,.12);border-radius:50%;right:-45px;top:-55px}
+    .case-card>*{position:relative}
+    .case-card span{font-size:.83rem;font-weight:900;opacity:.82}
+    .case-card h3{margin:8px 0 8px;font-size:1.35rem}
+    .case-card p{margin:0;color:rgba(255,255,255,.82)}
+
+    .info-card{padding:26px;border-radius:var(--dh-radius-lg);background:#fff;border:1px solid var(--dh-border)}
+    .info-card strong{display:block;margin-bottom:10px;font-size:1.05rem}
+    .info-card p{margin:0;color:var(--dh-text-soft);font-size:.93rem}
+
+    .site-footer{padding:54px 0 110px;background:#0d1728;color:#fff}
+    .footer-grid{display:grid;grid-template-columns:1.2fr .8fr .8fr;gap:36px}
+    .footer-title{margin:0 0 13px;font-size:1.45rem;font-weight:900}
+    .footer-copy{margin:0;color:rgba(255,255,255,.65)}
+    .footer-links{display:grid;gap:9px;color:rgba(255,255,255,.76)}
+    .footer-call{font-size:1.55rem;font-weight:900;color:#fff}
+
+    @media(max-width:1024px){
+      .site-nav{display:none}
+      .menu-toggle{display:block}
+      .why-grid{grid-template-columns:1fr}
+      .process-list{grid-template-columns:repeat(2,1fr)}
+      .footer-grid{grid-template-columns:1fr 1fr}
+    }
+    @media(max-width:720px){
+      .site-header__inner{min-height:64px}
+      .header-call{display:none}
+      .hero-machine{min-height:340px;padding:18px}
+      .machine-panel{padding:18px}
+      .machine-screen{height:145px}
+      .section-head{display:block;margin-bottom:28px}
+      .process-list{grid-template-columns:1fr}
+      .footer-grid{grid-template-columns:1fr}
+    }
+  </style>
 
   <script type="application/ld+json">
   {
     "@context":"https://schema.org",
-    "@graph":[
-      {
-        "@type":"Organization",
-        "@id":"https://drainhero.kr/#organization",
-        "name":"드레인명장",
-        "url":"https://drainhero.kr/",
-        "telephone":"1877-8196"
-      },
-      {
-        "@type":"WebSite",
-        "@id":"https://drainhero.kr/#website",
-        "url":"https://drainhero.kr/",
-        "name":"드레인명장",
-        "publisher":{"@id":"https://drainhero.kr/#organization"},
-        "inLanguage":"ko-KR"
-      },
-      {
-        "@type":"WebPage",
-        "@id":"https://drainhero.kr/#webpage",
-        "url":"https://drainhero.kr/",
-        "name":"하수구막힘·배관고압세척·배관내시경 | 드레인명장",
-        "isPartOf":{"@id":"https://drainhero.kr/#website"},
-        "about":{"@id":"https://drainhero.kr/#organization"},
-        "inLanguage":"ko-KR"
-      },
-      {
-        "@type":"FAQPage",
-        "mainEntity":[
-          {
-            "@type":"Question",
-            "name":"물이 천천히 내려가면 이미 막힘이 진행된 건가요?",
-            "acceptedAnswer":{"@type":"Answer","text":"배수 속도가 이전보다 지속적으로 느려졌다면 배수구나 배관 내부에 오염물이 누적되고 있을 가능성이 있습니다. 정확한 원인은 배관 상태를 확인한 뒤 판단해야 합니다."}
-          },
-          {
-            "@type":"Question",
-            "name":"모든 하수구막힘에 고압세척이 필요한가요?",
-            "acceptedAnswer":{"@type":"Answer","text":"모든 현장에 고압세척이 필요한 것은 아닙니다. 막힌 위치, 배관 길이, 오염물의 종류와 누적 범위를 확인한 뒤 적합한 작업 방법을 선택합니다."}
-          },
-          {
-            "@type":"Question",
-            "name":"배관내시경은 언제 사용하나요?",
-            "acceptedAnswer":{"@type":"Answer","text":"막힘 위치가 불분명하거나 같은 문제가 반복될 때 배관 내부 상태와 이물질 위치를 확인하기 위해 사용할 수 있습니다."}
-          },
-          {
-            "@type":"Question",
-            "name":"식당 하수구는 왜 반복해서 막히나요?",
-            "acceptedAnswer":{"@type":"Answer","text":"기름, 음식물 찌꺼기, 세제 성분 등이 배관 벽면에 계속 쌓이면 일시적으로 물길을 열어도 다시 막힐 수 있습니다."}
-          }
-        ]
-      }
-    ]
+    "@type":"LocalBusiness",
+    "name":"드레인명장",
+    "url":"https://drainhero.kr/",
+    "telephone":"1877-8196",
+    "areaServed":["서울특별시","경기도","인천광역시"],
+    "description":"하수구막힘, 배관내시경, 배관고압세척 상담 및 현장 작업"
   }
   </script>
-
-  <style>
-    :root{
-      --navy:#08313a;
-      --navy2:#0d4650;
-      --mint:#19c795;
-      --mint-soft:#eafaf5;
-      --ink:#18343a;
-      --muted:#647b80;
-      --line:#dce9e5;
-      --soft:#f6faf8;
-      --white:#fff;
-      --shadow:0 18px 48px rgba(8,49,58,.12);
-      --radius:24px;
-    }
-    *{box-sizing:border-box}
-    html{scroll-behavior:smooth}
-    body{
-      margin:0;
-      color:var(--ink);
-      background:#edf4f2;
-      font-family:Arial,"Noto Sans KR",sans-serif;
-      line-height:1.75;
-      word-break:keep-all;
-    }
-    a{color:inherit}
-    img{display:block;max-width:100%}
-    .skip{position:absolute;left:-9999px}
-    .skip:focus{left:14px;top:14px;z-index:9999;background:#fff;padding:12px 16px;border-radius:10px}
-    .site{max-width:1280px;margin:auto;background:#fff;box-shadow:0 0 60px rgba(0,0,0,.06)}
-    .container{width:min(1120px,calc(100% - 40px));margin:auto}
-    .header{
-      position:sticky;top:0;z-index:100;
-      background:rgba(255,255,255,.96);backdrop-filter:blur(12px);
-      border-bottom:1px solid var(--line)
-    }
-    .header-inner{min-height:72px;display:flex;align-items:center;gap:26px}
-    .brand{text-decoration:none;display:flex;align-items:center;gap:12px;margin-right:auto}
-    .brand-mark{
-      width:42px;height:42px;border-radius:14px;background:var(--navy);
-      color:#fff;display:grid;place-items:center;font-weight:900
-    }
-    .brand strong{display:block;font-size:22px;line-height:1.15;color:var(--navy)}
-    .brand small{display:block;margin-top:4px;color:var(--muted);font-size:11px}
-    .nav{display:flex;align-items:center;gap:20px}
-    .nav a{text-decoration:none;font-size:13px;font-weight:800}
-    .header-phone{text-decoration:none;font-size:15px;font-weight:950;color:var(--navy)}
-    .menu{display:none;border:0;background:none;font-size:24px}
-    .hero{
-      position:relative;overflow:hidden;
-      padding:82px 0 76px;
-      background:
-        radial-gradient(circle at 86% 14%,rgba(25,199,149,.16),transparent 28%),
-        linear-gradient(135deg,#f7fcfa 0%,#eef8f5 100%)
-    }
-    .hero-layout{display:grid;grid-template-columns:1.04fr .96fr;gap:56px;align-items:center}
-    .eyebrow{margin:0 0 12px;color:var(--mint);font-weight:950;font-size:13px;letter-spacing:.08em}
-    .hero h1{margin:0;color:var(--navy);font-size:clamp(42px,5vw,66px);line-height:1.12;letter-spacing:-.045em}
-    .hero h1 em{font-style:normal;color:var(--mint)}
-    .hero-desc{margin:24px 0 0;font-size:18px;color:#526e74}
-    .hero-contact{
-      margin-top:30px;display:inline-flex;align-items:center;gap:14px;
-      padding:16px 20px;border:1px solid #cfe3de;border-radius:18px;
-      background:#fff;text-decoration:none;box-shadow:0 10px 26px rgba(8,49,58,.07)
-    }
-    .hero-contact strong{font-size:25px;color:var(--navy);letter-spacing:.02em}
-    .hero-contact span{font-size:12px;color:var(--muted)}
-    .hero-points{display:flex;flex-wrap:wrap;gap:9px;margin-top:25px}
-    .hero-points span{padding:8px 12px;background:#fff;border:1px solid var(--line);border-radius:999px;font-size:12px;font-weight:800}
-    .hero-photo{position:relative}
-    .hero-photo img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:30px;box-shadow:var(--shadow)}
-    .photo-note{
-      position:absolute;left:-24px;bottom:24px;padding:16px 20px;
-      border-radius:18px;background:#fff;box-shadow:var(--shadow)
-    }
-    .photo-note small{display:block;color:var(--muted)}
-    .photo-note strong{color:var(--navy)}
-    .section{padding:86px 0}
-    .section-soft{background:var(--soft)}
-    .section-dark{background:var(--navy);color:#fff}
-    .section-head{max-width:740px;margin-bottom:34px}
-    .section-head h2{margin:0;color:var(--navy);font-size:clamp(31px,4vw,46px);line-height:1.2;letter-spacing:-.035em}
-    .section-dark .section-head h2{color:#fff}
-    .section-head p:last-child{margin:16px 0 0;color:var(--muted)}
-    .section-dark .section-head p:last-child{color:#bfd0d4}
-    .symptom-grid,.service-grid,.target-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
-    .symptom-card,.service-card,.target-card{
-      border:1px solid var(--line);border-radius:22px;background:#fff;
-      padding:26px;text-decoration:none;transition:.2s ease
-    }
-    .symptom-card:hover,.service-card:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
-    .symptom-icon{width:46px;height:46px;border-radius:15px;background:var(--mint-soft);display:grid;place-items:center;font-size:22px}
-    .symptom-card h3,.service-card h3,.target-card h3{margin:18px 0 8px;color:var(--navy);font-size:21px}
-    .symptom-card p,.service-card p,.target-card p{margin:0;color:var(--muted);font-size:14px}
-    .service-card{padding:0;overflow:hidden}
-    .service-card img{width:100%;aspect-ratio:16/9;object-fit:cover}
-    .service-body{padding:23px}
-    .service-body a{display:inline-block;margin-top:13px;text-decoration:none;color:var(--navy);font-weight:900;font-size:13px}
-    .why-layout{display:grid;grid-template-columns:.88fr 1.12fr;gap:56px;align-items:start}
-    .why-copy h2{margin:0;color:var(--navy);font-size:44px;line-height:1.2}
-    .why-copy p{color:var(--muted)}
-    .why-list{display:grid;gap:12px}
-    .why-item{
-      display:grid;grid-template-columns:48px 1fr;gap:16px;
-      padding:20px;border:1px solid var(--line);border-radius:18px;background:#fff
-    }
-    .why-item b{width:42px;height:42px;border-radius:13px;background:var(--navy);color:#fff;display:grid;place-items:center}
-    .why-item h3{margin:0;color:var(--navy)}
-    .why-item p{margin:5px 0 0;color:var(--muted);font-size:14px}
-    .process{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
-    .process article{padding:25px;border:1px solid rgba(255,255,255,.15);border-radius:20px;background:rgba(255,255,255,.06)}
-    .process strong{color:#6be0bb;font-size:13px}
-    .process h3{margin:12px 0 8px;font-size:20px}
-    .process p{margin:0;color:#bfd0d4;font-size:14px}
-    .area-layout{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
-    .area-card{
-      padding:28px;border-radius:22px;background:#fff;border:1px solid var(--line)
-    }
-    .area-card h3{margin:0 0 9px;color:var(--navy)}
-    .area-card p{margin:0 0 18px;color:var(--muted);font-size:14px}
-    .area-card a{display:inline-block;text-decoration:none;font-weight:900;color:var(--navy)}
-    .area-links{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
-    .area-links a{padding:7px 10px;border-radius:999px;background:var(--mint-soft);font-size:12px}
-    .case-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
-    .case-card{padding:26px;border-radius:22px;border:1px solid var(--line);background:#fff}
-    .case-card span{display:inline-block;color:var(--mint);font-size:12px;font-weight:950}
-    .case-card h3{margin:12px 0;color:var(--navy);font-size:20px}
-    .case-card p{margin:0;color:var(--muted);font-size:14px}
-    .faq{display:grid;gap:10px;max-width:880px}
-    details{border:1px solid var(--line);border-radius:17px;background:#fff;padding:0 20px}
-    summary{cursor:pointer;list-style:none;padding:20px 0;font-weight:900;color:var(--navy)}
-    summary::-webkit-details-marker{display:none}
-    details p{margin:0;padding:0 0 20px;color:var(--muted)}
-    .brand-panel{
-      display:grid;grid-template-columns:1fr auto;gap:30px;align-items:center;
-      padding:34px;border-radius:26px;background:var(--mint-soft);border:1px solid #ccece2
-    }
-    .brand-panel h2{margin:0;color:var(--navy);font-size:34px}
-    .brand-panel p{margin:8px 0 0;color:var(--muted)}
-    .brand-panel a{text-decoration:none;font-size:28px;font-weight:950;color:var(--navy)}
-    .footer{padding:46px 0 100px;background:#092a32;color:#fff}
-    .footer-grid{display:grid;grid-template-columns:1.4fr repeat(3,1fr);gap:30px}
-    .footer a{display:block;color:#bfd0d4;text-decoration:none;margin:7px 0;font-size:13px}
-    .footer strong{display:block;margin-bottom:10px}
-    .footer p{color:#9eb4b9;font-size:13px}
-    .floating-call{
-      position:fixed;right:24px;bottom:24px;z-index:120;
-      width:62px;height:62px;border-radius:50%;background:var(--navy);color:#fff;
-      display:grid;place-items:center;text-decoration:none;font-size:25px;
-      box-shadow:0 14px 34px rgba(8,49,58,.28)
-    }
-    .mobile-bar{display:none}
-    @media(max-width:920px){
-      .nav{display:none;position:absolute;left:20px;right:20px;top:70px;padding:18px;background:#fff;border:1px solid var(--line);border-radius:18px;box-shadow:var(--shadow)}
-      .nav.open{display:grid}
-      .menu{display:block}
-      .header-phone{display:none}
-      .hero{padding:56px 0}
-      .hero-layout,.why-layout{grid-template-columns:1fr}
-      .hero-photo{order:-1}
-      .photo-note{left:16px}
-      .symptom-grid,.service-grid,.target-grid,.area-layout,.case-grid{grid-template-columns:repeat(2,1fr)}
-      .process{grid-template-columns:repeat(2,1fr)}
-      .footer-grid{grid-template-columns:1fr 1fr}
-    }
-    @media(max-width:640px){
-      body{padding-bottom:70px}
-      .container{width:min(100% - 28px,1120px)}
-      .header-inner{min-height:64px}
-      .brand small{display:none}
-      .brand strong{font-size:20px}
-      .hero h1{font-size:40px}
-      .hero-desc{font-size:16px}
-      .hero-contact{width:100%;justify-content:space-between}
-      .hero-contact strong{font-size:23px}
-      .section{padding:66px 0}
-      .section-head h2,.why-copy h2{font-size:32px}
-      .symptom-grid,.service-grid,.target-grid,.area-layout,.case-grid,.process{grid-template-columns:1fr}
-      .brand-panel{grid-template-columns:1fr}
-      .brand-panel a{font-size:26px}
-      .footer-grid{grid-template-columns:1fr}
-      .floating-call{display:none}
-      .mobile-bar{
-        position:fixed;left:0;right:0;bottom:0;z-index:130;
-        display:flex;align-items:center;justify-content:space-between;
-        padding:10px 15px;background:#fff;border-top:1px solid var(--line);
-        box-shadow:0 -8px 24px rgba(0,0,0,.08)
-      }
-      .mobile-bar strong{color:var(--navy);font-size:15px}
-      .mobile-bar a{
-        min-width:52px;height:46px;border-radius:14px;background:var(--navy);color:#fff;
-        display:grid;place-items:center;text-decoration:none;font-size:21px
-      }
-    }
-  </style>
 </head>
 
 <body>
-<a class="skip" href="#main">본문 바로가기</a>
-<div class="site">
-
-  <header class="header">
-    <div class="container header-inner">
+  <header class="site-header">
+    <div class="dh-container site-header__inner">
       <a class="brand" href="/" aria-label="드레인명장 홈">
-        <span class="brand-mark">D</span>
-        <span><strong>드레인명장</strong><small>막힘 원인부터 확인하는 배관 서비스</small></span>
+        <span class="brand__mark">D</span>
+        <span>드레인명장</span>
       </a>
 
-      <button class="menu" type="button" aria-label="메뉴 열기" aria-expanded="false">☰</button>
-
-      <nav class="nav" aria-label="주요 메뉴">
-        <a href="#symptoms">증상 확인</a>
-        <a href="#services">주요 서비스</a>
-        <a href="#process">작업 과정</a>
-        <a href="#areas">지역 안내</a>
+      <nav class="site-nav" aria-label="주요 메뉴">
+        <a href="#services">서비스</a>
+        <a href="#symptoms">막힘 증상</a>
+        <a href="#process">작업과정</a>
+        <a href="#cases">작업사례</a>
         <a href="#faq">자주 묻는 질문</a>
+        <a href="#regions">출동지역</a>
       </nav>
 
-      <a class="header-phone" href="tel:18778196">1877-8196</a>
+      <a class="dh-btn dh-btn--accent header-call" href="tel:18778196">☎ 1877-8196</a>
+      <button class="menu-toggle" type="button" aria-label="메뉴 열기">☰</button>
     </div>
   </header>
 
-  <main id="main">
-    <section class="hero">
-      <div class="container hero-layout">
+  <main>
+    <section class="dh-hero">
+      <div class="dh-container dh-hero__grid">
         <div>
-          <p class="eyebrow">DRAIN MASTER</p>
-          <h1>물이 안 내려가나요?<br><em>원인부터 확인합니다</em></h1>
-          <p class="hero-desc">
-            싱크대 물빠짐 저하부터 식당 하수구 역류, 건물 공용배관 막힘까지
-            증상과 배관 구조를 살펴보고 필요한 점검 범위를 안내합니다.
-          </p>
+          <span class="dh-eyebrow">배관 문제, 원인부터 확인합니다</span>
+          <h1 class="dh-hero__title">막힌 곳만 뚫는 작업보다<br><strong>왜 막혔는지 확인하는 작업</strong></h1>
+          <p class="dh-hero__text">싱크대·변기·욕실·식당 하수구부터 공용배관, 우수관, 오수관까지 현장 상태를 확인하고 필요한 장비와 작업 범위를 안내합니다.</p>
 
-          <a class="hero-contact" href="tel:18778196" aria-label="1877-8196 전화 연결">
-            <strong>1877-8196</strong>
-            <span>클릭 시 전화 연결</span>
-          </a>
+          <div class="hero-points">
+            <span class="hero-point">서울·경기·인천 상담</span>
+            <span class="hero-point">배관내시경 점검</span>
+            <span class="hero-point">배관고압세척</span>
+            <span class="hero-point">상가·건물 배관</span>
+          </div>
 
-          <div class="hero-points" aria-label="주요 안내">
-            <span>증상 확인</span>
-            <span>배관 구조 점검</span>
-            <span>장비 선택</span>
-            <span>배수 상태 확인</span>
+          <div class="dh-hero__actions">
+            <a class="dh-btn dh-btn--accent" href="tel:18778196">전화상담 1877-8196</a>
+            <a class="dh-btn dh-btn--outline" href="#symptoms">증상 먼저 확인하기</a>
           </div>
         </div>
 
-        <div class="hero-photo">
-          <img src="/assets/images/hero/main-hero-01.webp.png" alt="배관 막힘 현장을 확인하는 작업자" width="1200" height="900" fetchpriority="high">
-          <div class="photo-note">
-            <small>현장 상태에 따라</small>
-            <strong>확인 범위와 작업 방법이 달라집니다</strong>
+        <div class="dh-hero__visual hero-machine" aria-label="배관 내시경 진단 이미지">
+          <div class="machine-panel">
+            <div class="machine-screen">
+              <b>배관 내시경 진단</b>
+              <div class="pipe-line"></div>
+              <div class="screen-grid"><span></span><span></span><span></span><span></span></div>
+            </div>
+            <div class="machine-label">
+              <span>막힘 위치 확인</span>
+              <small>원인별 작업 안내</small>
+            </div>
           </div>
+          <div class="dh-hero__badge">내시경 · 고압세척 장비 운영</div>
         </div>
       </div>
     </section>
 
-    <section id="symptoms" class="section">
-      <div class="container">
+    <section id="symptoms" class="dh-section dh-section--soft">
+      <div class="dh-container">
         <div class="section-head">
-          <p class="eyebrow">증상별 안내</p>
-          <h2>어디에서 문제가 생겼나요?</h2>
-          <p>막힌 장소와 함께 물이 고이는지, 악취나 역류가 있는지를 살펴보면 확인 범위를 좁히는 데 도움이 됩니다.</p>
-        </div>
-
-        <div class="symptom-grid">
-          <a class="symptom-card" href="/services/home-blockage/">
-            <span class="symptom-icon">🚰</span><h3>싱크대 막힘</h3><p>물빠짐 저하 · 꿀렁거림 · 기름 슬러지</p>
-          </a>
-          <a class="symptom-card" href="/services/home-blockage/">
-            <span class="symptom-icon">🚿</span><h3>욕실 배수구</h3><p>바닥 물고임 · 냄새 · 세면대 배수 불량</p>
-          </a>
-          <a class="symptom-card" href="/services/home-blockage/">
-            <span class="symptom-icon">🚽</span><h3>변기 막힘</h3><p>수위 상승 · 반복 막힘 · 물빠짐 이상</p>
-          </a>
-          <a class="symptom-card" href="/services/home-blockage/">
-            <span class="symptom-icon">🧺</span><h3>세탁실 배수</h3><p>세탁기 사용 시 바닥배수구 역류</p>
-          </a>
-          <a class="symptom-card" href="/services/restaurant-drain/">
-            <span class="symptom-icon">🍽️</span><h3>식당 하수구</h3><p>기름 · 음식물 · 주방 메인관 막힘</p>
-          </a>
-          <a class="symptom-card" href="/services/building-pipeline/">
-            <span class="symptom-icon">🏢</span><h3>건물 배관</h3><p>공용관 · 횡주관 · 여러 공간 동시 문제</p>
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <section id="services" class="section section-soft">
-      <div class="container">
-        <div class="section-head">
-          <p class="eyebrow">주요 서비스</p>
-          <h2>배관 상태에 따라 작업 방법을 선택합니다</h2>
-          <p>한 가지 장비를 모든 현장에 적용하기보다 막힌 위치, 오염물의 성격, 배관 길이와 구조를 확인하는 과정이 먼저입니다.</p>
-        </div>
-
-        <div class="service-grid">
-          <article class="service-card">
-            <img src="/assets/images/services/high-pressure-cleaning.webp.png" alt="배관 내부 슬러지를 제거하는 고압세척 작업" width="1200" height="675" loading="lazy">
-            <div class="service-body"><h3>배관 고압세척</h3><p>배관 벽면에 넓게 누적된 기름 슬러지와 오염물을 세척합니다.</p><a href="/services/high-pressure-cleaning/">자세히 보기 →</a></div>
-          </article>
-          <article class="service-card">
-            <img src="/assets/images/services/drain-camera.webp.png" alt="배관 내부를 확인하는 내시경 점검" width="1200" height="675" loading="lazy">
-            <div class="service-body"><h3>배관내시경 점검</h3><p>막힌 위치가 불분명하거나 같은 문제가 반복될 때 내부 상태를 확인합니다.</p><a href="/services/drain-camera/">자세히 보기 →</a></div>
-          </article>
-          <article class="service-card">
-            <img src="/assets/images/services/restaurant-grease.webp.png" alt="식당 주방 배관의 기름 슬러지 점검" width="1200" height="675" loading="lazy">
-            <div class="service-body"><h3>식당 기름 배관</h3><p>음식물, 유지방, 원두 찌꺼기가 누적되는 주방 배관을 살펴봅니다.</p><a href="/services/restaurant-drain/">자세히 보기 →</a></div>
-          </article>
-          <article class="service-card">
-            <img src="/assets/images/services/building-pipeline.webp.png" alt="상가와 건물의 공용배관 점검" width="1200" height="675" loading="lazy">
-            <div class="service-body"><h3>건물 공용배관</h3><p>여러 층과 점포에 연결된 횡주관, 수직관, 메인관의 흐름을 확인합니다.</p><a href="/services/building-pipeline/">자세히 보기 →</a></div>
-          </article>
-          <article class="service-card">
-            <img src="/assets/images/services/rooftop-drain.webp.png" alt="옥상 배수구와 우수관 점검" width="1200" height="675" loading="lazy">
-            <div class="service-body"><h3>옥상 우수관</h3><p>낙엽, 흙, 모래 등으로 막힌 옥상 배수구와 빗물 배관을 확인합니다.</p><a href="/services/rooftop-drain/">자세히 보기 →</a></div>
-          </article>
-          <article class="service-card">
-            <img src="/assets/images/services/home-blockage.webp.png" alt="가정집 싱크대와 욕실 배수구 점검" width="1200" height="675" loading="lazy">
-            <div class="service-body"><h3>가정집 생활 배관</h3><p>싱크대, 욕실, 세탁실, 변기 등 생활 공간의 배수 문제를 살펴봅니다.</p><a href="/services/home-blockage/">자세히 보기 →</a></div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="container why-layout">
-        <div class="why-copy">
-          <p class="eyebrow">점검 기준</p>
-          <h2>같은 막힘처럼 보여도 원인은 다를 수 있습니다</h2>
-          <p>배수구 입구의 단순 이물질, 벽체 내부 배관의 슬러지, 여러 공간이 합류한 공용배관 문제는 확인 범위와 장비 선택이 달라집니다.</p>
-        </div>
-
-        <div class="why-list">
-          <article class="why-item"><b>01</b><div><h3>증상 확인</h3><p>물이 안 내려가는 장소, 역류 시점, 반복 여부를 확인합니다.</p></div></article>
-          <article class="why-item"><b>02</b><div><h3>배관 구조 확인</h3><p>한 공간의 배관인지 여러 공간이 연결된 공용배관인지 살펴봅니다.</p></div></article>
-          <article class="why-item"><b>03</b><div><h3>작업 방법 판단</h3><p>관통, 석션, 내시경, 고압세척 등 필요한 방법을 구분합니다.</p></div></article>
-          <article class="why-item"><b>04</b><div><h3>배수 상태 확인</h3><p>작업 후 물흐름과 연결 배수구의 반응을 확인합니다.</p></div></article>
-        </div>
-      </div>
-    </section>
-
-    <section id="process" class="section section-dark">
-      <div class="container">
-        <div class="section-head">
-          <p class="eyebrow">작업 과정</p>
-          <h2>상담부터 배수 확인까지</h2>
-          <p>현재 증상을 먼저 듣고 현장 구조를 확인한 뒤 작업 범위를 결정합니다.</p>
-        </div>
-
-        <div class="process">
-          <article><strong>STEP 01</strong><h3>상담 접수</h3><p>막힌 장소와 현재 증상을 확인합니다.</p></article>
-          <article><strong>STEP 02</strong><h3>현장 점검</h3><p>배수 상태와 연결 구조를 살펴봅니다.</p></article>
-          <article><strong>STEP 03</strong><h3>작업 진행</h3><p>상태에 맞는 장비와 방법을 적용합니다.</p></article>
-          <article><strong>STEP 04</strong><h3>최종 확인</h3><p>물흐름과 재역류 여부를 확인합니다.</p></article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section section-soft">
-      <div class="container">
-        <div class="section-head">
-          <p class="eyebrow">서비스 대상</p>
-          <h2>생활 배관부터 대형 공용배관까지</h2>
-          <p>현장 용도와 사용량에 따라 오염 형태와 점검 범위가 달라질 수 있습니다.</p>
-        </div>
-
-        <div class="target-grid">
-          <article class="target-card"><h3>주택·빌라</h3><p>싱크대, 욕실, 세탁실, 변기 등 생활 배수 문제</p></article>
-          <article class="target-card"><h3>아파트·오피스텔</h3><p>세대 배관, 공용관, 반복 역류와 배수 불량</p></article>
-          <article class="target-card"><h3>식당·카페</h3><p>기름 슬러지, 원두 찌꺼기, 주방 메인관</p></article>
-          <article class="target-card"><h3>상가·사무실</h3><p>여러 점포가 연결된 공용배관과 바닥배수구</p></article>
-          <article class="target-card"><h3>학교·병원</h3><p>사용량이 많은 다중이용시설의 배수 흐름</p></article>
-          <article class="target-card"><h3>공장·대형건물</h3><p>횡주관, 오수관, 맨홀과 외부 메인배관</p></article>
-        </div>
-      </div>
-    </section>
-
-    <section id="areas" class="section">
-      <div class="container">
-        <div class="section-head">
-          <p class="eyebrow">지역 안내</p>
-          <h2>지역별 상세페이지에서 확인하세요</h2>
-          <p>메인페이지는 전체 서비스의 중심 역할을 하고, 지역별 현장 정보는 서울·경기·인천 상세페이지로 나누어 안내합니다.</p>
-        </div>
-
-        <div class="area-layout">
-          <article class="area-card">
-            <h3>서울</h3><p>서울 25개 구별 하수구막힘과 배관 작업 정보를 확인할 수 있습니다.</p>
-            <a href="/seoul/">서울 지역 전체보기 →</a>
-            <div class="area-links">
-              <a href="/seoul/gwanakgu/">관악구</a><a href="/seoul/gangnamgu/">강남구</a><a href="/seoul/songpagu/">송파구</a><a href="/seoul/gurogu/">구로구</a>
-            </div>
-          </article>
-
-          <article class="area-card">
-            <h3>경기</h3><p>수원, 용인, 성남, 고양, 부천, 평택 등 주요 지역 정보를 연결합니다.</p>
-            <a href="/gyeonggi/">경기 지역 전체보기 →</a>
-            <div class="area-links">
-              <a href="/gyeonggi/suwon/">수원</a><a href="/gyeonggi/yongin/">용인</a><a href="/gyeonggi/seongnam/">성남</a><a href="/gyeonggi/pyeongtaek/">평택</a>
-            </div>
-          </article>
-
-          <article class="area-card">
-            <h3>인천</h3><p>부평구, 남동구, 미추홀구, 연수구, 서구 등 구·군별 페이지를 확인할 수 있습니다.</p>
-            <a href="/incheon/">인천 지역 전체보기 →</a>
-            <div class="area-links">
-              <a href="/incheon/bupyeonggu/">부평구</a><a href="/incheon/namdonggu/">남동구</a><a href="/incheon/michuholgu/">미추홀구</a><a href="/incheon/seogu/">서구</a>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section section-soft">
-      <div class="container">
-        <div class="section-head">
-          <p class="eyebrow">현장 유형</p>
-          <h2>자주 확인하는 배관 문제</h2>
-          <p>사례는 단순 결과만 나열하지 않고 증상, 원인, 확인 범위와 작업 방향을 중심으로 정리합니다.</p>
-        </div>
-
-        <div class="case-grid">
-          <article class="case-card"><span>식당 주방</span><h3>싱크대와 바닥배수구가 함께 역류하는 경우</h3><p>개별 배수구뿐 아니라 합류 이후 배관과 기름 슬러지 누적 범위를 확인합니다.</p></article>
-          <article class="case-card"><span>상가 공용배관</span><h3>여러 점포에서 동시에 물빠짐이 느린 경우</h3><p>점포별 배관보다 공용 횡주관과 건물 메인관의 흐름을 우선 살펴봅니다.</p></article>
-          <article class="case-card"><span>생활 배관</span><h3>싱크대 막힘이 짧은 기간 안에 반복되는 경우</h3><p>일시적으로 열린 물길 외에 배관 벽면의 오염물과 연결 구조를 확인합니다.</p></article>
-        </div>
-      </div>
-    </section>
-
-    <section id="faq" class="section">
-      <div class="container">
-        <div class="section-head">
-          <p class="eyebrow">FAQ</p>
-          <h2>자주 묻는 질문</h2>
-        </div>
-
-        <div class="faq">
-          <details><summary>물이 천천히 내려가면 이미 막힘이 진행된 건가요?</summary><p>배수 속도가 이전보다 지속적으로 느려졌다면 배수구 또는 배관 내부에 기름, 음식물, 이물질 등이 누적되고 있을 가능성이 있습니다. 정확한 원인은 배관 상태를 확인한 뒤 판단해야 합니다.</p></details>
-          <details><summary>모든 막힘에 고압세척이 필요한가요?</summary><p>모든 현장에 고압세척이 필요한 것은 아닙니다. 가까운 구간의 단순 이물질인지, 배관 벽면에 넓게 슬러지가 누적된 상태인지에 따라 작업 방법이 달라집니다.</p></details>
-          <details><summary>배관내시경은 언제 사용하나요?</summary><p>막힘 위치가 불분명하거나 같은 문제가 반복되는 경우, 배관 내부의 이물질 위치와 손상 여부를 확인하기 위해 사용할 수 있습니다.</p></details>
-          <details><summary>식당 하수구는 왜 반복해서 막히나요?</summary><p>기름과 음식물 찌꺼기가 배관 벽면에 계속 쌓이면 일시적으로 물길을 열어도 다시 막힐 수 있습니다. 사용량과 배관 구조를 함께 확인해야 합니다.</p></details>
-          <details><summary>여러 배수구가 동시에 문제라면 어디를 확인하나요?</summary><p>싱크대, 욕실, 세탁실 또는 여러 점포에서 동시에 증상이 나타난다면 개별 배수구보다 합류 배관, 횡주관, 외부 메인배관까지 확인 범위를 넓혀야 할 수 있습니다.</p></details>
-        </div>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="container">
-        <div class="brand-panel">
           <div>
-            <h2>드레인명장</h2>
-            <p>막힌 장소와 현재 증상을 알려주시면 확인할 내용을 안내해드립니다.</p>
+            <span class="dh-eyebrow">SYMPTOM CHECK</span>
+            <h2 class="dh-title">지금 나타나는 증상은 무엇인가요?</h2>
+            <p class="dh-subtitle">같은 막힘처럼 보여도 발생 위치와 원인은 다를 수 있습니다. 현재 증상을 기준으로 점검 범위를 좁힐 수 있습니다.</p>
           </div>
-          <a href="tel:18778196" aria-label="1877-8196 전화 연결">1877-8196</a>
+        </div>
+
+        <div class="dh-grid dh-grid--3">
+          <article class="dh-icon-card"><div class="dh-icon-card__icon">↓</div><div><h3 class="dh-icon-card__title">물이 안 내려가요</h3><p class="dh-icon-card__text">배수구 가까운 곳 또는 연결배관 내부가 막힌 상태일 수 있습니다.</p></div></article>
+          <article class="dh-icon-card"><div class="dh-icon-card__icon">⌛</div><div><h3 class="dh-icon-card__title">물이 천천히 내려가요</h3><p class="dh-icon-card__text">기름때와 이물질이 누적되며 배관 통로가 좁아졌을 수 있습니다.</p></div></article>
+          <article class="dh-icon-card"><div class="dh-icon-card__icon">↑</div><div><h3 class="dh-icon-card__title">바닥으로 역류해요</h3><p class="dh-icon-card__text">여러 배수구가 연결된 메인관이나 공용관 점검이 필요할 수 있습니다.</p></div></article>
+          <article class="dh-icon-card"><div class="dh-icon-card__icon">≈</div><div><h3 class="dh-icon-card__title">꿀렁거리는 소리가 나요</h3><p class="dh-icon-card__text">배관 내부 공기 흐름이 방해받거나 부분 막힘이 진행 중일 수 있습니다.</p></div></article>
+          <article class="dh-icon-card"><div class="dh-icon-card__icon">♨</div><div><h3 class="dh-icon-card__title">하수구 냄새가 올라와요</h3><p class="dh-icon-card__text">봉수, 연결부, 오염물 누적 등 여러 원인을 함께 살펴봐야 합니다.</p></div></article>
+          <article class="dh-icon-card"><div class="dh-icon-card__icon">↻</div><div><h3 class="dh-icon-card__title">막힘이 반복돼요</h3><p class="dh-icon-card__text">일시적으로 물길만 열린 경우 배관 벽면 오염물이 남아 재발할 수 있습니다.</p></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="services" class="dh-section">
+      <div class="dh-container">
+        <div class="section-head">
+          <div>
+            <span class="dh-eyebrow">DRAIN SERVICE</span>
+            <h2 class="dh-title">드레인명장 주요 서비스</h2>
+            <p class="dh-subtitle">주거공간의 생활 배관부터 식당·상가·건물의 메인 배관까지 현장 조건에 맞춰 확인합니다.</p>
+          </div>
+        </div>
+
+        <div class="dh-grid dh-grid--4">
+          <article class="dh-card service-card"><div class="service-card__icon">🍽</div><h3>싱크대막힘</h3><p>음식물과 기름 슬러지로 느려진 주방 배수 상태를 점검합니다.</p><a href="/service/sink/">자세히 보기 →</a></article>
+          <article class="dh-card service-card"><div class="service-card__icon">🚽</div><h3>변기막힘</h3><p>단순 이물질부터 배관 구간 문제까지 막힌 범위를 확인합니다.</p><a href="/service/toilet/">자세히 보기 →</a></article>
+          <article class="dh-card service-card"><div class="service-card__icon">🚿</div><h3>욕실하수구</h3><p>머리카락, 비누 찌꺼기, 오염물로 인한 느린 배수를 확인합니다.</p><a href="/service/bathroom/">자세히 보기 →</a></article>
+          <article class="dh-card service-card"><div class="service-card__icon">🧺</div><h3>세탁실하수구</h3><p>세탁수 역류와 바닥배수구 냄새, 연결배관 상태를 점검합니다.</p><a href="/service/laundry/">자세히 보기 →</a></article>
+          <article class="dh-card service-card"><div class="service-card__icon">🏪</div><h3>식당하수구</h3><p>주방 사용량이 많은 업장의 기름 슬러지와 메인관을 확인합니다.</p><a href="/service/restaurant/">자세히 보기 →</a></article>
+          <article class="dh-card service-card"><div class="service-card__icon">💦</div><h3>배관고압세척</h3><p>배관 벽면에 넓게 누적된 오염물을 고압수로 세척합니다.</p><a href="/service/high-pressure/">자세히 보기 →</a></article>
+          <article class="dh-card service-card"><div class="service-card__icon">📹</div><h3>배관내시경</h3><p>보이지 않는 배관 내부와 막힘 위치를 화면으로 확인합니다.</p><a href="/service/camera/">자세히 보기 →</a></article>
+          <article class="dh-card service-card"><div class="service-card__icon">🌧</div><h3>우수관막힘</h3><p>옥상과 베란다, 건물 우수 배관의 낙엽과 퇴적물을 점검합니다.</p><a href="/service/rainwater/">자세히 보기 →</a></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="dh-section dh-section--soft">
+      <div class="dh-container why-grid">
+        <div>
+          <span class="dh-eyebrow">WHY DRAIN HERO</span>
+          <h2 class="dh-title">장비보다 먼저<br>원인을 판단합니다</h2>
+          <p class="dh-subtitle">모든 막힘에 같은 작업을 적용하지 않습니다. 증상, 배관 구조, 사용 환경을 살펴본 뒤 필요한 범위를 정하는 것이 중요합니다.</p>
+          <div class="dh-hero__actions">
+            <a class="dh-btn dh-btn--primary" href="tel:18778196">현장 증상 상담하기</a>
+          </div>
+        </div>
+
+        <div class="diagnosis-box">
+          <div class="diagnosis-step"><b>1</b><div><h3>증상 확인</h3><p>언제부터, 어느 배수구에서, 어떤 상황에 문제가 발생하는지 확인합니다.</p></div></div>
+          <div class="diagnosis-step"><b>2</b><div><h3>배관 범위 판단</h3><p>개별 배수구 문제인지 메인관 또는 공용관 문제인지 범위를 좁힙니다.</p></div></div>
+          <div class="diagnosis-step"><b>3</b><div><h3>장비 선택</h3><p>스프링, 석션, 내시경, 고압세척 등 현장에 필요한 장비를 적용합니다.</p></div></div>
+          <div class="diagnosis-step"><b>4</b><div><h3>배수 확인</h3><p>작업 후 실제 물 사용을 통해 배수 흐름과 재발 가능 요소를 확인합니다.</p></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="process" class="dh-section">
+      <div class="dh-container">
+        <div class="section-head">
+          <div>
+            <span class="dh-eyebrow">WORK PROCESS</span>
+            <h2 class="dh-title">작업은 이렇게 진행됩니다</h2>
+          </div>
+        </div>
+
+        <div class="process-list">
+          <article class="process-item"><h3>전화상담</h3><p>현재 증상과 건물 형태, 발생 위치를 간단히 확인합니다.</p></article>
+          <article class="process-item"><h3>현장점검</h3><p>배수 상태와 연결 구조를 살펴 막힌 구간을 추정합니다.</p></article>
+          <article class="process-item"><h3>원인확인</h3><p>필요한 경우 배관내시경 등으로 내부 상태를 확인합니다.</p></article>
+          <article class="process-item"><h3>배관작업</h3><p>현장에 맞는 장비를 이용해 막힘 제거 또는 세척을 진행합니다.</p></article>
+          <article class="process-item"><h3>최종확인</h3><p>물을 흘려보내 배수 속도와 역류 여부를 다시 확인합니다.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="cases" class="dh-section dh-section--soft">
+      <div class="dh-container">
+        <div class="section-head">
+          <div>
+            <span class="dh-eyebrow">FIELD CASE</span>
+            <h2 class="dh-title">현장에서 자주 만나는 배관 문제</h2>
+          </div>
+        </div>
+
+        <div class="dh-grid dh-grid--3">
+          <article class="case-card"><span>식당·상가</span><h3>주방 바닥배수구 역류</h3><p>기름 슬러지와 음식물 찌꺼기가 메인관 내부에 누적된 사례</p></article>
+          <article class="case-card"><span>아파트·빌라</span><h3>싱크대 배수 반복 막힘</h3><p>일시 관통 후 남아 있던 배관 벽면 오염물을 확인한 사례</p></article>
+          <article class="case-card"><span>건물 공용배관</span><h3>여러 층에서 동시에 느린 배수</h3><p>개별 배수구가 아닌 공용 횡주관 범위를 점검한 사례</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="dh-section">
+      <div class="dh-container">
+        <div class="dh-cta">
+          <div>
+            <h2 class="dh-cta__title">물이 내려가지 않거나 역류하고 있나요?</h2>
+            <p class="dh-cta__text">현재 나타나는 증상을 알려주시면 점검이 필요한 범위를 먼저 안내해 드립니다.</p>
+          </div>
+          <a class="dh-btn dh-btn--accent" href="tel:18778196">1877-8196 전화상담</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="faq" class="dh-section dh-section--soft">
+      <div class="dh-container">
+        <div class="section-head">
+          <div>
+            <span class="dh-eyebrow">FAQ</span>
+            <h2 class="dh-title">자주 묻는 질문</h2>
+          </div>
+        </div>
+
+        <div class="dh-faq">
+          <div class="dh-faq__item">
+            <button class="dh-faq__question" type="button" aria-expanded="true">물이 천천히 내려가면 바로 점검해야 하나요?<span>−</span></button>
+            <div class="dh-faq__answer">배수 속도가 계속 느려지고 꿀렁거림이나 냄새가 함께 나타난다면 배관 내부에 오염물이 누적되고 있을 가능성이 있습니다. 완전히 막히기 전에 상태를 확인하는 편이 좋습니다.</div>
+          </div>
+          <div class="dh-faq__item">
+            <button class="dh-faq__question" type="button" aria-expanded="false">고압세척은 모든 막힘에 필요한가요?<span>＋</span></button>
+            <div class="dh-faq__answer" hidden>모든 현장에 필요한 작업은 아닙니다. 이물질 위치, 배관 길이, 기름 슬러지 누적 범위를 확인한 뒤 고압세척 필요 여부를 판단합니다.</div>
+          </div>
+          <div class="dh-faq__item">
+            <button class="dh-faq__question" type="button" aria-expanded="false">배관내시경으로 무엇을 확인할 수 있나요?<span>＋</span></button>
+            <div class="dh-faq__answer" hidden>배관 내부 오염, 이물질 위치, 파손 의심 구간, 연결 상태 등을 화면으로 살펴볼 수 있습니다. 다만 배관 구조에 따라 진입 가능한 범위는 달라질 수 있습니다.</div>
+          </div>
+          <div class="dh-faq__item">
+            <button class="dh-faq__question" type="button" aria-expanded="false">식당 하수구는 왜 자주 막히나요?<span>＋</span></button>
+            <div class="dh-faq__answer" hidden>기름, 세척수, 음식물 찌꺼기가 함께 배출되면서 배관 벽면에 슬러지가 넓게 쌓이기 쉽습니다. 사용량이 많은 업장은 주기적인 점검이 도움이 됩니다.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="dh-section">
+      <div class="dh-container">
+        <div class="section-head">
+          <div>
+            <span class="dh-eyebrow">DRAIN GUIDE</span>
+            <h2 class="dh-title">알아두면 도움이 되는 배관 정보</h2>
+          </div>
+        </div>
+
+        <div class="dh-grid dh-grid--3">
+          <a class="info-card" href="/guide/slow-drain/"><strong>물이 천천히 내려가는 이유</strong><p>부분 막힘이 진행될 때 함께 나타나는 신호를 정리합니다.</p></a>
+          <a class="info-card" href="/guide/high-pressure-cleaning/"><strong>고압세척이 필요한 경우</strong><p>단순 관통과 배관 세척의 차이를 이해하기 쉽게 설명합니다.</p></a>
+          <a class="info-card" href="/guide/backflow/"><strong>하수구 역류가 생기는 위치</strong><p>개별 배수구와 메인관 역류의 차이를 알아봅니다.</p></a>
+        </div>
+      </div>
+    </section>
+
+    <section id="regions" class="dh-section dh-section--soft">
+      <div class="dh-container">
+        <div class="section-head">
+          <div>
+            <span class="dh-eyebrow">SERVICE AREA</span>
+            <h2 class="dh-title">서울·경기·인천 지역 안내</h2>
+            <p class="dh-subtitle">지역별 상세 페이지에서 주요 작업 유형과 상담 정보를 확인할 수 있습니다.</p>
+          </div>
+        </div>
+
+        <div class="dh-grid dh-grid--3">
+          <div class="dh-region-box"><h3 class="dh-region-box__title">서울</h3><div class="dh-region-links"><a href="/seoul/gangnamgu/">강남구</a><a href="/seoul/gwanakgu/">관악구</a><a href="/seoul/songpagu/">송파구</a><a href="/seoul/gangdonggu/">강동구</a><a href="/seoul/">서울 전체보기</a></div></div>
+          <div class="dh-region-box"><h3 class="dh-region-box__title">경기</h3><div class="dh-region-links"><a href="/gyeonggi/suwon/">수원</a><a href="/gyeonggi/yongin/">용인</a><a href="/gyeonggi/seongnam/">성남</a><a href="/gyeonggi/goyang/">고양</a><a href="/gyeonggi/">경기 전체보기</a></div></div>
+          <div class="dh-region-box"><h3 class="dh-region-box__title">인천</h3><div class="dh-region-links"><a href="/incheon/namdonggu/">남동구</a><a href="/incheon/bupyeonggu/">부평구</a><a href="/incheon/gyeyanggu/">계양구</a><a href="/incheon/seogu/">서구</a><a href="/incheon/">인천 전체보기</a></div></div>
         </div>
       </div>
     </section>
   </main>
 
-  <footer class="footer">
-    <div class="container footer-grid">
-      <div><strong>드레인명장</strong><p>하수구막힘, 배관고압세척, 배관내시경, 식당·상가·건물 공용배관 정보를 안내합니다.</p></div>
-      <div><strong>주요 서비스</strong><a href="/services/high-pressure-cleaning/">배관 고압세척</a><a href="/services/drain-camera/">배관내시경</a><a href="/services/restaurant-drain/">식당 하수구</a></div>
-      <div><strong>지역 안내</strong><a href="/seoul/">서울</a><a href="/gyeonggi/">경기</a><a href="/incheon/">인천</a></div>
-      <div><strong>상담 번호</strong><a href="tel:18778196">1877-8196</a></div>
+  <footer class="site-footer">
+    <div class="dh-container footer-grid">
+      <div><h2 class="footer-title">드레인명장</h2><p class="footer-copy">막힌 곳만 뚫는 작업보다 원인을 확인하고 필요한 방법을 안내합니다.</p></div>
+      <div><h3>바로가기</h3><div class="footer-links"><a href="#services">서비스</a><a href="#process">작업과정</a><a href="#faq">자주 묻는 질문</a><a href="#regions">출동지역</a></div></div>
+      <div><h3>전화상담</h3><a class="footer-call" href="tel:18778196">1877-8196</a><p class="footer-copy">서울·경기·인천 상담</p></div>
     </div>
   </footer>
 
-</div>
+  <a class="dh-mobile-call" href="tel:18778196" aria-label="드레인명장 전화상담">☎ 드레인명장 1877-8196</a>
 
-<a class="floating-call" href="tel:18778196" aria-label="전화 연결">☎</a>
-
-<div class="mobile-bar" aria-label="전화 연결">
-  <strong>드레인명장&nbsp;&nbsp;1877-8196</strong>
-  <a href="tel:18778196" aria-label="1877-8196 전화 연결">☎</a>
-</div>
-
-<script>
-  const menu = document.querySelector('.menu');
-  const nav = document.querySelector('.nav');
-  menu.addEventListener('click', () => {
-    const opened = menu.getAttribute('aria-expanded') === 'true';
-    menu.setAttribute('aria-expanded', String(!opened));
-    menu.setAttribute('aria-label', opened ? '메뉴 열기' : '메뉴 닫기');
-    nav.classList.toggle('open');
-  });
-  nav.querySelectorAll('a').forEach((link) => {
-    link.addEventListener('click', () => {
-      menu.setAttribute('aria-expanded','false');
-      nav.classList.remove('open');
+  <script>
+    document.querySelectorAll('.dh-faq__question').forEach(function(button){
+      button.addEventListener('click', function(){
+        const answer = button.nextElementSibling;
+        const open = button.getAttribute('aria-expanded') === 'true';
+        button.setAttribute('aria-expanded', String(!open));
+        answer.hidden = open;
+        button.querySelector('span').textContent = open ? '＋' : '−';
+      });
     });
-  });
-</script>
+  </script>
 </body>
 </html>
