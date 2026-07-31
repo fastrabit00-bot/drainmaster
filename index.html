@@ -13,7 +13,7 @@
 </script>
 <meta charset="utf-8"/>
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
-<title>드레인명장 | 서울·경기·인천 하수구막힘·고압세척·건물배관</title>
+<title>드레인명장 | 하수구막힘·배관고압세척·건물배관 전문 안내</title>
 <meta content="하수구막힘 업체 안내. 서울·경기·인천 주요 생활권 싱크대막힘, 변기막힘, 식당 기름배관, 배관내시경, 고압세척, 횡주관·우수관·맨홀 점검과 작업 과정을 확인하세요. 드레인명장 1877-8196." name="description"/>
 <meta content="index,follow" name="robots"/>
 <link href="https://drainhero.kr/seoul/gwanakgu/" rel="canonical"/>
@@ -1366,6 +1366,250 @@ footer{
   #regions .related-links{grid-template-columns:1fr}
 }
 
+
+/* ===== Homepage master v2 additions ===== */
+.home-tech-overview,
+.field-solution-hub,
+.homepage-knowledge-hub{
+  padding:100px 20px;
+}
+.home-tech-overview{
+  background:linear-gradient(180deg,#f4fbfc 0%,#ffffff 100%);
+}
+.section-inner{
+  width:min(1180px,100%);
+  margin:0 auto;
+}
+.section-heading{
+  margin-bottom:42px;
+}
+.split-heading{
+  display:grid;
+  grid-template-columns:1.08fr .92fr;
+  align-items:end;
+  gap:60px;
+}
+.center-heading{
+  max-width:820px;
+  margin-left:auto;
+  margin-right:auto;
+  text-align:center;
+}
+.section-kicker{
+  display:block;
+  margin-bottom:12px;
+  color:#087f8c;
+  font-size:.78rem;
+  font-weight:900;
+  letter-spacing:.13em;
+}
+.section-heading h2{
+  margin:0;
+  color:#102f34;
+  font-size:clamp(2rem,4vw,3.35rem);
+  line-height:1.17;
+  letter-spacing:-.055em;
+}
+.section-heading p{
+  margin:0;
+  color:#627579;
+  font-size:1.02rem;
+  line-height:1.85;
+}
+.center-heading p{margin-top:18px}
+
+.technology-feature-grid{
+  display:grid;
+  grid-template-columns:1.15fr .85fr;
+  grid-template-rows:repeat(2,285px);
+  gap:20px;
+}
+.technology-feature{
+  position:relative;
+  min-height:285px;
+  overflow:hidden;
+  border-radius:28px;
+  background:#102f34;
+  box-shadow:0 22px 55px rgba(15,47,52,.16);
+}
+.technology-feature--large{grid-row:1 / span 2}
+.technology-feature img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  transition:transform .55s ease;
+}
+.technology-feature:hover img{transform:scale(1.045)}
+.technology-feature:after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:linear-gradient(180deg,transparent 18%,rgba(5,24,29,.86) 100%);
+}
+.technology-feature__overlay{
+  position:absolute;
+  z-index:2;
+  left:0;
+  right:0;
+  bottom:0;
+  padding:30px;
+  color:#fff;
+}
+.technology-feature__overlay span{
+  font-size:.72rem;
+  font-weight:900;
+  letter-spacing:.12em;
+  color:#7de7ef;
+}
+.technology-feature__overlay h3{
+  margin:8px 0;
+  color:#fff;
+  font-size:1.6rem;
+}
+.technology-feature--large .technology-feature__overlay h3{font-size:2.15rem}
+.technology-feature__overlay p{
+  max-width:590px;
+  margin:0;
+  color:rgba(255,255,255,.78);
+}
+.technology-feature__overlay a{
+  display:inline-flex;
+  margin-top:14px;
+  color:#fff;
+  font-weight:900;
+  border-bottom:1px solid rgba(255,255,255,.55);
+}
+
+.field-solution-hub{background:#f7f8f6}
+.field-solution-grid{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:22px;
+}
+.field-solution-card{
+  display:grid;
+  grid-template-columns:190px 1fr;
+  min-height:220px;
+  overflow:hidden;
+  border:1px solid #dce8e8;
+  border-radius:24px;
+  background:#fff;
+  box-shadow:0 14px 35px rgba(16,47,52,.07);
+}
+.field-solution-card img{
+  width:100%;
+  height:100%;
+  min-height:220px;
+  object-fit:cover;
+}
+.field-solution-card>div{
+  padding:28px 25px;
+}
+.field-solution-card span{
+  color:#087f8c;
+  font-size:.72rem;
+  font-weight:900;
+  letter-spacing:.1em;
+}
+.field-solution-card h3{
+  margin:8px 0 10px;
+  color:#15383e;
+  font-size:1.35rem;
+}
+.field-solution-card p{
+  margin:0;
+  color:#6c7b7f;
+  line-height:1.72;
+}
+.field-solution-card a{
+  display:inline-flex;
+  margin-top:14px;
+  color:#087f8c;
+  font-weight:900;
+}
+
+.homepage-knowledge-hub{
+  background:#0c3037;
+  color:#fff;
+}
+.homepage-knowledge-hub .section-heading h2{color:#fff}
+.homepage-knowledge-hub .section-heading p{color:rgba(255,255,255,.68)}
+.homepage-knowledge-hub .section-kicker{color:#70e0e8}
+.knowledge-hub-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:16px;
+}
+.knowledge-hub-card{
+  display:flex;
+  flex-direction:column;
+  min-height:260px;
+  padding:26px;
+  border:1px solid rgba(255,255,255,.12);
+  border-radius:22px;
+  background:rgba(255,255,255,.06);
+  color:#fff;
+  transition:.25s ease;
+}
+.knowledge-hub-card:hover{
+  transform:translateY(-5px);
+  background:rgba(255,255,255,.1);
+  border-color:rgba(112,224,232,.55);
+}
+.knowledge-hub-card span{
+  width:44px;
+  height:44px;
+  display:grid;
+  place-items:center;
+  margin-bottom:30px;
+  border-radius:13px;
+  background:#0a8795;
+  font-weight:900;
+}
+.knowledge-hub-card strong{
+  font-size:1.2rem;
+}
+.knowledge-hub-card p{
+  flex:1;
+  margin:12px 0 20px;
+  color:rgba(255,255,255,.66);
+  font-size:.92rem;
+  line-height:1.7;
+}
+.knowledge-hub-card b{
+  color:#8decf2;
+  font-size:.9rem;
+}
+
+@media(max-width:900px){
+  .split-heading{grid-template-columns:1fr;gap:18px}
+  .technology-feature-grid{
+    grid-template-columns:1fr;
+    grid-template-rows:auto;
+  }
+  .technology-feature,
+  .technology-feature--large{
+    grid-row:auto;
+    min-height:360px;
+  }
+  .field-solution-grid{grid-template-columns:1fr}
+  .knowledge-hub-grid{grid-template-columns:repeat(2,1fr)}
+}
+@media(max-width:620px){
+  .home-tech-overview,
+  .field-solution-hub,
+  .homepage-knowledge-hub{padding:72px 18px}
+  .technology-feature,
+  .technology-feature--large{min-height:330px}
+  .technology-feature__overlay{padding:22px}
+  .technology-feature--large .technology-feature__overlay h3,
+  .technology-feature__overlay h3{font-size:1.45rem}
+  .field-solution-card{grid-template-columns:1fr}
+  .field-solution-card img{height:210px;min-height:0}
+  .knowledge-hub-grid{grid-template-columns:1fr}
+  .knowledge-hub-card{min-height:220px}
+}
+
 </style>
 <meta content="website" property="og:type"/>
 <meta content="ko_KR" property="og:locale"/>
@@ -1491,8 +1735,9 @@ section{scroll-margin-top:90px}
 <header>
 <a class="logo" href="/">드레인<span>명장</span></a>
 <nav>
-<a href="#home">생활막힘</a>
-<a href="#highpressure">고압세척</a>
+<a href="#technology">기술력</a>
+<a href="#solutions">서비스</a>
+        <a href="#highpressure">고압세척</a>
 <a href="#building">건물배관</a>
 <a href="#cases">현장사례</a>
 <a href="#guide">작업안내</a>
@@ -1563,6 +1808,61 @@ section{scroll-margin-top:90px}
 <div class="trust-item"><b>작업 후 재확인</b><span>물을 다시 흘려보내 배수 속도와 역류 여부를 확인하고 관리 방법을 안내합니다.</span></div>
 </div>
 </section>
+
+<section class="home-tech-overview" id="technology">
+  <div class="section-inner">
+    <div class="section-heading split-heading">
+      <div>
+        <span class="section-kicker">DRAIN HERO TECHNOLOGY</span>
+        <h2>생활 배관부터 건물 메인관까지<br>문제 범위를 나누어 확인합니다</h2>
+      </div>
+      <p>
+        물이 내려가지 않는다는 같은 증상도 실제 원인은 다를 수 있습니다.
+        드레인명장은 배수구 가까운 구간, 연결배관, 공용 횡주관,
+        오수관과 맨홀까지 단계별로 확인 범위를 넓혀갑니다.
+      </p>
+    </div>
+
+    <div class="technology-feature-grid">
+      <article class="technology-feature technology-feature--large">
+        <img src="./assets/images/services/building-pipeline.webp.png"
+             alt="건물 전체 배관과 공용배관 구조 안내"
+             loading="lazy" width="1200" height="760">
+        <div class="technology-feature__overlay">
+          <span>BUILDING PIPELINE</span>
+          <h3>건물 전체 배관 진단</h3>
+          <p>여러 층과 여러 배수구가 함께 느려질 때는 공용배관과 메인관까지 확인합니다.</p>
+          <a href="#building">건물배관 자세히 보기</a>
+        </div>
+      </article>
+
+      <article class="technology-feature">
+        <img src="./assets/images/services/high-pressure-cleaning.webp.png"
+             alt="하수구 배관 고압세척 작업 안내"
+             loading="lazy" width="900" height="620">
+        <div class="technology-feature__overlay">
+          <span>HIGH PRESSURE</span>
+          <h3>배관고압세척</h3>
+          <p>배관 벽면에 넓게 누적된 기름과 슬러지를 세척합니다.</p>
+          <a href="#highpressure">고압세척 보기</a>
+        </div>
+      </article>
+
+      <article class="technology-feature">
+        <img src="./assets/images/services/drain-camera.webp.png"
+             alt="배관내시경을 이용한 하수관 내부 점검"
+             loading="lazy" width="900" height="620">
+        <div class="technology-feature__overlay">
+          <span>PIPE CAMERA</span>
+          <h3>배관내시경</h3>
+          <p>보이지 않는 배관 안쪽과 막힘 의심 구간을 화면으로 살펴봅니다.</p>
+          <a href="#guide">내시경 안내 보기</a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
 <section id="home">
 <div class="kicker">HOME DRAIN</div>
 <h2>
@@ -1622,7 +1922,7 @@ section{scroll-margin-top:90px}
     </p>
 </div>
 </section>
-<section class="commercial">
+<section class="commercial" id="commercial">
 <div class="kicker orange-title">RESTAURANT DRAIN</div>
 <h2>
     서울·경기·인천 고깃집·음식점 하수구막힘<br/>
@@ -1922,6 +2222,70 @@ section{scroll-margin-top:90px}
 </section>
 
 <div class="mobile-mid-cta info-only"><p>증상이 여러 곳에서 함께 나타난다면 공용배관까지 확인해야 할 수 있습니다.</p></div>
+
+<section class="field-solution-hub" id="solutions">
+  <div class="section-inner">
+    <div class="section-heading center-heading">
+      <span class="section-kicker">FIELD SOLUTION</span>
+      <h2>장소와 오염 유형에 맞춘 배관 해결 범위</h2>
+      <p>
+        가정 배관, 음식점 주방, 옥상과 우수관, 공장과 대형 건물은
+        배관 구조와 오염 형태가 다르기 때문에 점검 순서도 달라집니다.
+      </p>
+    </div>
+
+    <div class="field-solution-grid">
+      <article class="field-solution-card">
+        <img src="./assets/images/services/home-blockage.webp.png"
+             alt="가정 싱크대 욕실 변기 하수구막힘 안내"
+             loading="lazy" width="800" height="560">
+        <div>
+          <span>HOME DRAIN</span>
+          <h3>가정 생활배관</h3>
+          <p>싱크대·변기·욕실·세탁실에서 시작되는 느린 배수와 반복 막힘을 확인합니다.</p>
+          <a href="#home">생활막힘 안내</a>
+        </div>
+      </article>
+
+      <article class="field-solution-card">
+        <img src="./assets/images/services/restaurant-grease.webp.png"
+             alt="음식점 주방 배관 기름 슬러지와 역류 안내"
+             loading="lazy" width="800" height="560">
+        <div>
+          <span>RESTAURANT PIPE</span>
+          <h3>식당·상가 배관</h3>
+          <p>기름, 음식물 찌꺼기, 세척수가 반복적으로 유입되는 주방 메인관을 살펴봅니다.</p>
+          <a href="#commercial">식당배관 안내</a>
+        </div>
+      </article>
+
+      <article class="field-solution-card">
+        <img src="./assets/images/services/rooftop-drain.webp.png"
+             alt="옥상 우수관과 빗물 배관 막힘 안내"
+             loading="lazy" width="800" height="560">
+        <div>
+          <span>ROOFTOP DRAIN</span>
+          <h3>옥상·우수관</h3>
+          <p>낙엽, 토사, 이물질로 막히기 쉬운 옥상 배수구와 빗물 배관을 확인합니다.</p>
+          <a href="#building">우수관 안내</a>
+        </div>
+      </article>
+
+      <article class="field-solution-card">
+        <img src="./assets/images/process/building-system.png"
+             alt="건물 횡주관 오수관 맨홀 연결 구조 안내"
+             loading="lazy" width="800" height="560">
+        <div>
+          <span>MAIN PIPE SYSTEM</span>
+          <h3>횡주관·오수관·맨홀</h3>
+          <p>여러 배관이 합류하는 공용 구간과 건물 밖 배수 흐름까지 범위를 넓혀 확인합니다.</p>
+          <a href="#pipe-guide">배관 구조 보기</a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
 <section class="content-matrix" id="symptoms">
 <div class="kicker">SYMPTOM GUIDE</div>
 <h2>증상으로 먼저 살펴보는<br/>서울·경기·인천 배관 문제 가능성</h2>
@@ -2130,6 +2494,50 @@ section{scroll-margin-top:90px}
 </article>
 </div>
 <div class="notice-box"><b>비용 안내:</b> 배관 구조와 막힌 범위를 확인하지 않은 상태에서는 정확한 작업 범위를 단정하기 어렵습니다. 전화 상담 시 발생 장소, 역류 여부, 동시에 느린 배수구, 최근 작업 이력을 알려주시면 필요한 점검 범위를 정하는 데 도움이 됩니다.</div>
+</section>
+
+
+<section class="homepage-knowledge-hub" id="knowledge">
+  <div class="section-inner">
+    <div class="section-heading split-heading">
+      <div>
+        <span class="section-kicker">PIPE KNOWLEDGE HUB</span>
+        <h2>배관 구조와 증상을 이해하면<br>상담도 더 정확해집니다</h2>
+      </div>
+      <p>
+        같은 막힘이라도 발생 장소와 함께 나타나는 증상에 따라
+        확인해야 할 배관 범위가 달라집니다.
+        아래 항목을 통해 현재 상황과 가까운 정보를 먼저 확인해보세요.
+      </p>
+    </div>
+
+    <div class="knowledge-hub-grid">
+      <a class="knowledge-hub-card" href="#self-check">
+        <span>01</span>
+        <strong>하수구 자가진단</strong>
+        <p>한 곳만 느린지, 여러 곳이 함께 느린지 증상부터 확인합니다.</p>
+        <b>자가진단 보기 →</b>
+      </a>
+      <a class="knowledge-hub-card" href="#pipe-guide">
+        <span>02</span>
+        <strong>배관 용어 안내</strong>
+        <p>횡주관, 우수관, 오수관, 맨홀과 봉수의 의미를 알아봅니다.</p>
+        <b>배관용어 보기 →</b>
+      </a>
+      <a class="knowledge-hub-card" href="#work-standard">
+        <span>03</span>
+        <strong>작업 기준 안내</strong>
+        <p>현장에서 어떤 순서로 확인하고 장비를 선택하는지 안내합니다.</p>
+        <b>점검기준 보기 →</b>
+      </a>
+      <a class="knowledge-hub-card" href="#provider-check">
+        <span>04</span>
+        <strong>업체 상담 전 확인사항</strong>
+        <p>비용만 묻기 전에 증상과 현장 조건을 어떻게 전달할지 확인합니다.</p>
+        <b>선택기준 보기 →</b>
+      </a>
+    </div>
+  </div>
 </section>
 
 <section class="area" id="regions">
